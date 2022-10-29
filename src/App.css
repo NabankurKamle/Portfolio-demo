@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer base {
+  @font-face {
+    font-family: "Gotham";
+    src: url("/public/font/GothamMedium.ttf");
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @font-face {
+    font-family: "GothamBold";
+    font-style: bold;
+    src: url("/public/font/GothamBold.ttf");
   }
-  to {
-    transform: rotate(360deg);
+  @font-face {
+    font-family: "Gothamlight";
+    font-style: light;
+    src: url("/public/font/GothamLight.ttf");
+  }
+  @font-face {
+    font-family: "GothamItalic";
+    font-style: italic;
+    src: url("/public/font/GothamMediumItalic.ttf");
+  }
+  @font-face {
+    font-family: "GothamBoldItalic";
+    font-style: bold italic;
+    src: url("/public/font/GothamBoldItalic.ttf");
+  }
+  @font-face {
+    font-family: "GothamLightItalic";
+    font-style: light italic;
+    src: url("/public/font/GothamLightItalic.ttf");
   }
 }
