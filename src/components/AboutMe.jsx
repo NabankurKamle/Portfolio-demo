@@ -60,7 +60,7 @@ const AboutMe = () => {
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
               <p>Express JS</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out flex items-center justify-center hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
               <p>Tailwind CSS</p>
             </li>
           </ul>
