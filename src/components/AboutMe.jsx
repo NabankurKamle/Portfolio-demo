@@ -40,28 +40,28 @@ const AboutMe = () => {
         <div>
           <ul className="flex flex-wrap gap-y-5 gap-x-5 text-xs py-8">
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              HTML
+              <p>HTML</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              CSS
+              <p>CSS</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              JavaScript
+              <p>JavaScript</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              React JS
+              <p>React JS</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              Node JS
+              <p>Node JS</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              MongoDB
+              <p>MongoDB</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              Express JS
+              <p>Express JS</p>
             </li>
             <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
-              Tailwind CSS
+              <p>Tailwind CSS</p>
             </li>
           </ul>
         </div>
