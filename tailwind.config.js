@@ -17,12 +17,12 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        Gotham: ["Gotham", "cursive"],
-        GothamBold: ["GothamBold", "cursive"],
-        GothamLight: ["GothamLight", "cursive"],
-        GothamItalic: ["GothamItalic", "cursive"],
-        GothamBoldItalic: ["GothamBoldItalic", "cursive"],
-        GothamLightItalic: ["GothamLightItalic", "cursive"],
+        Helvetica: ["Helvetica", "cursive"],
+        HelveticaBold: ["HelveticaBold", "cursive"],
+        HelveticaLight: ["HelveticaLight", "cursive"],
+        HelveticaItalic: ["HelveticaItalic", "cursive"],
+        HelveticaBoldItalic: ["HelveticaBoldItalic", "cursive"],
+        HelveticaRoundedBold: ["HelveticaRoundedBold", "cursive"],
       },
       boxShadow: {
         neo: "8px 8px 12px #C6D2E0,-8px -8px 12px #F6FAFD",
@@ -32,6 +32,7 @@ module.exports = {
         neoInsetButton:
           "5px 5px 8px #C6D2E0,-5px -5px 8px #F6FAFD,-3px -3px 5px #F6FAFD inset,3px 3px 5px #C6D2E0 inset",
         inset: "-8px -8px 8px #F6FAFD inset, 8px 8px 8px #C6D2E0 inset",
+        insetInput: "-4px -4px 4px #F6FAFD inset, 4px 4px 4px #C6D2E0 inset",
         neoButton: "5px 5px 12px #C6D2E0,-5px -5px 12px #F6FAFD",
       },
       backgroundColor: {

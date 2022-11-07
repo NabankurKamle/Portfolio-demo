@@ -4,32 +4,32 @@
 
 @layer base {
   @font-face {
-    font-family: "Gotham";
-    src: url("/public/font/GothamMedium.ttf");
+    font-family: "Helvetica";
+    src: url("/public/font/Helvetica.ttf");
   }
   @font-face {
-    font-family: "GothamBold";
+    font-family: "HelveticaBold";
     font-style: bold;
-    src: url("/public/font/GothamBold.ttf");
+    src: url("/public/font/Helvetica-Bold.ttf");
   }
   @font-face {
-    font-family: "Gothamlight";
+    font-family: "HelveticaLight";
     font-style: light;
-    src: url("/public/font/GothamLight.ttf");
+    src: url("/public/font/Helvetica-Light.ttf");
   }
   @font-face {
-    font-family: "GothamItalic";
+    font-family: "HelveticaItalic";
     font-style: italic;
-    src: url("/public/font/GothamMediumItalic.ttf");
+    src: url("/public/font/Helvetica-Italic.ttf");
   }
   @font-face {
-    font-family: "GothamBoldItalic";
+    font-family: "HelveticaBoldItalic";
     font-style: bold italic;
-    src: url("/public/font/GothamBoldItalic.ttf");
+    src: url("/public/font/Helvetica-Bold-Italic.ttf");
   }
   @font-face {
-    font-family: "GothamLightItalic";
+    font-family: "HelveticaRoundedBold";
     font-style: light italic;
-    src: url("/public/font/GothamLightItalic.ttf");
+    src: url("/public/font/Helvetica-Rounded-Bold.otf");
   }
 }

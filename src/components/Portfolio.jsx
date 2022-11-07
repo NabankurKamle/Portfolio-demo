@@ -11,7 +11,7 @@ const Portfolio = () => {
   };
   return (
     <div id="portfolio" className="bg-light py-16 flex flex-col items-center">
-      <h1 className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-GothamBold text-lg mb-10">
+      <h1 className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-HelveticaBold text-lg mb-10">
         PORTFOLIOS
       </h1>
       <div>
@@ -22,8 +22,8 @@ const Portfolio = () => {
               onClick={() => handleActiveLink(id)}
               className={
                 activeLink === id
-                  ? "shadow-neoInsetButton transition-all ease-out duration-100 delay-75 px-10 py-3 rounded-lg  bg-light text-[#006EE5] text-sm"
-                  : " px-10 py-3 rounded-lg transition-all ease-out duration-100 delay-75 bg-light text-[#41507B] hover:text-[#006EE5] hover:shadow-neoButton cursor-pointer text-sm"
+                  ? "shadow-neoInsetButton transition-all ease-out duration-200 delay-75 px-10 py-3 rounded-lg  bg-light text-[#006EE5] text-sm"
+                  : " px-10 py-3 rounded-lg transition-all ease-out duration-200 delay-75 bg-light text-[#41507B] hover:text-[#006EE5] hover:shadow-neoButton cursor-pointer text-sm"
               }
             >
               <Link to="">{title}</Link>

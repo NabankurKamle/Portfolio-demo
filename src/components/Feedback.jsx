@@ -13,7 +13,7 @@ const Feedback = () => {
       id="feedback"
       className="bg-light py-16 flex flex-col items-center justify-center"
     >
-      <h1 className="text-center text-4xl font-GothamBold  text-[#233053] mb-10">
+      <h1 className="text-center text-4xl font-HelveticaRoundedBold  text-[#233053] mb-10">
         Clients Feedback
       </h1>
       <div className="w-[60rem] h-[40rem] flex flex-wrap gap-32 items-center justify-center relative">
@@ -58,7 +58,7 @@ const Feedback = () => {
               src={testimonials[activeId - 1].imgUrl}
               alt=""
             />
-            <h1 className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-GothamBold text-lg">
+            <h1 className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-HelveticaBold text-lg">
               TESTIMONIALS
             </h1>
           </div>
@@ -66,7 +66,7 @@ const Feedback = () => {
             {testimonials[activeId - 1].message}
           </p>
           <div className="text-center">
-            <h1 className=" text-lg font-GothamBold text-[#233053] mb-1 ">
+            <h1 className=" text-lg font-HelveticaBold text-[#233053] mb-1 ">
               {testimonials[activeId - 1].name}
             </h1>
             <p className="text-sm text-[#95ADC7]">
@@ -75,7 +75,7 @@ const Feedback = () => {
           </div>
         </div>
       </div>
-      <button className="text-[#41507B] font-GothamBold  rounded-lg px-12 py-3 shadow-neoButton hover:shadow-neohover hover:scale-95 active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out">
+      <button className="text-[#41507B] font-HelveticaRoundedBold  rounded-lg px-12 py-3 shadow-neoButton hover:shadow-neohover hover:scale-95 active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out">
         <Link to="">Show All</Link>
       </button>
     </div>

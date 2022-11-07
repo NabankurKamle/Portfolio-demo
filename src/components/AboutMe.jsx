@@ -13,23 +13,23 @@ const AboutMe = () => {
       </div>
       <div className="text-sm w-[38rem] text-[#233053]">
         <div className="pb-2">
-          <h1 className="text-3xl font-GothamBold mb-2">About Me</h1>
-          <h3 className="font-GothamBold mb-1">Nabankur Kamle</h3>
+          <h1 className="text-3xl font-HelveticaRoundedBold mb-2">About Me</h1>
+          <h3 className="font-HelveticaBold mb-1">Nabankur Kamle</h3>
           <p className=" text-[#006EE5]">
             Full Stack Web Developer.React JS.Node JS.
           </p>
         </div>
         <div className="py-2 border-t-2 border-[#95ADC7] w-[12rem]">
-          <p className="font-GothamBold">
+          <p className="font-HelveticaBold">
             Residence:
-            <span className="ml-1 text-[#95ADC7] font-Gotham">India</span>
+            <span className="ml-1 text-[#95ADC7] font-Helvetica">India</span>
           </p>
-          <p className="font-GothamBold">
+          <p className="font-HelveticaBold">
             City:
-            <span className="ml-1 text-[#95ADC7] font-Gotham">Kolkata</span>
+            <span className="ml-1 text-[#95ADC7] font-Helvetica">Kolkata</span>
           </p>
-          <p className="font-GothamBold">
-            Age:<span className="ml-1 text-[#95ADC7] font-Gotham">20</span>
+          <p className="font-HelveticaBold">
+            Age:<span className="ml-1 text-[#95ADC7] font-Helvetica">20</span>
           </p>
         </div>
         <p className="text-[#95ADC7]">
@@ -39,28 +39,28 @@ const AboutMe = () => {
         </p>
         <div>
           <ul className="flex flex-wrap gap-y-5 gap-x-5 text-xs py-8">
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>HTML</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>CSS</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>JavaScript</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>React JS</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>Node JS</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>MongoDB</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>Express JS</p>
             </li>
-            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out flex items-center justify-center hover:text-[#006EE5] hover:scale-110 cursor-pointer rounded-full">
+            <li className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full">
               <p>Tailwind CSS</p>
             </li>
           </ul>
@@ -68,7 +68,7 @@ const AboutMe = () => {
         <button>
           <Link
             className={
-              "text-[#41507B]  rounded-lg px-5 py-3 shadow-neoButton hover:shadow-neohover active:shadow-neoInset hover:text-[#006EE5] transition-all duration-200"
+              "text-[#41507B]  rounded-lg px-5 py-3 shadow-neoButton hover:shadow-neohover active:shadow-neoInset hover:text-[#006EE5] transition-all duration-200 font-HelveticaRoundedBold"
             }
             to=""
           >
