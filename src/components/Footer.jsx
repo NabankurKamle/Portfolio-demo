@@ -17,23 +17,23 @@ const Footer = () => {
             <h3 className="font-HelveticaRoundedBold text-[#233053] text-lg mb-6">
               Connet with me
             </h3>
-            <ul className="flex flex-col items-center sm:flex-row space-y-5 sm:space-y-0 sm:space-x-3">
-              <li className="text-2xl px-3 py-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0165E1]">
+            <ul className="flex items-center sm:space-y-0 sm:space-x-3">
+              <li className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0165E1]">
                 <Link to="">
                   <FaFacebookF />
                 </Link>
               </li>
-              <li className="text-2xl px-3 py-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#bc2a8d]">
+              <li className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#bc2a8d]">
                 <Link to="">
                   <BsInstagram />
                 </Link>
               </li>
-              <li className="text-2xl px-3 py-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0A66C2]">
+              <li className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0A66C2]">
                 <Link to="">
                   <FaLinkedinIn />
                 </Link>
               </li>
-              <li className="text-2xl px-3 py-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#F1502F]">
+              <li className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#F1502F]">
                 <Link to="">
                   <BsGithub />
                 </Link>

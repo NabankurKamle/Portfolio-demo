@@ -87,11 +87,11 @@ const Contact = () => {
           </div>
           <div className="flex flex-col lg:flex-row items-end lg:items-center justify-center space-y-5 lg:space-y-0 lg:space-x-5">
             <div className=" flex flex-col items-center justify-center">
-              <button className="w-[12rem] sm:w-[20rem] lg:w-auto px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out ">
+              <button className="w-[12rem] sm:w-[20rem] lg:max-w-[11rem] px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out ">
                 <IoCall className="mr-3 text-2xl" />
                 +6297522799
               </button>
-              <p className="w-[12rem] sm:w-auto text-xs text-center px-5 mt-3 text-[#95ADC7]">
+              <p className="w-[12rem]  lg:w-auto text-xs text-center px-5 mt-3 text-[#95ADC7]">
                 Call any time from Mon-Fri for business enquiry
               </p>
             </div>

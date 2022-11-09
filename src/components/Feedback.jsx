@@ -16,7 +16,7 @@ const Feedback = () => {
       <h1 className="text-center text-4xl font-HelveticaRoundedBold  text-[#233053] mb-10">
         Clients Feedback
       </h1>
-      <div className="w-auto h-auto lg:w-[60rem] lg:h-[40rem] mb-10 flex sm:flex-row flex-wrap gap-28 lg:gap-x-52 items-center justify-center md:justify-between relative">
+      <div className="w-auto h-auto lg:w-[60rem] md:h-[75rem] lg:max-h-[40rem] mb-10 flex sm:flex-row flex-wrap gap-28 lg:gap-x-52 items-center justify-center md:justify-between relative">
         {testimonials.map(({ id, imgUrl }) => (
           <div
             key={id}
