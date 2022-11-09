@@ -15,7 +15,7 @@ const Portfolio = () => {
         PORTFOLIOS
       </h1>
       <div>
-        <ul className="flex items-center justify-center rounded-lg shadow-neoButton gap-x-3">
+        <ul className="flex flex-col gap-y-5 sm:gap-y-0 sm:flex-row items-center justify-center rounded-lg shadow-neoButton sm:gap-x-3">
           {portfolios.map(({ id, title }) => (
             <li
               key={id}
@@ -31,7 +31,7 @@ const Portfolio = () => {
           ))}
         </ul>
       </div>
-      <div className="mt-16 w-[64rem] flex flex-wrap gap-10 justify-center items-center">
+      <div className="mt-16 w-auto lg:w-[64rem] flex flex-wrap gap-10 justify-center items-center">
         {portfolios[activeLink - 1].projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

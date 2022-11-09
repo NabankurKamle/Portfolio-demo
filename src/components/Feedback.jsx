@@ -16,7 +16,7 @@ const Feedback = () => {
       <h1 className="text-center text-4xl font-HelveticaRoundedBold  text-[#233053] mb-10">
         Clients Feedback
       </h1>
-      <div className="w-[60rem] h-[40rem] flex flex-wrap gap-32 items-center justify-center relative">
+      <div className="w-auto h-auto lg:w-[60rem] lg:h-[40rem] mb-10 flex sm:flex-row flex-wrap gap-28 lg:gap-x-52 items-center justify-center md:justify-between relative">
         {testimonials.map(({ id, imgUrl }) => (
           <div
             key={id}
@@ -27,21 +27,21 @@ const Feedback = () => {
                 ? { justifyContent: "end" }
                 : { justifyContent: "center" }
             }
-            className="w-[25rem] px-10 flex justify-center "
+            className="w-auto sm:w-[13rem] md:w-[25rem] lg:w-[45rem] xl:w-[40rem] px-1 inline-block sm:flex justify-center"
           >
             <div
               onClick={() => handleActiveId(id)}
               style={
                 activeId === id
                   ? {
-                      width: "10rem",
-                      height: "10rem",
+                      width: "6rem",
+                      height: "6rem",
                       padding: "8px",
                       cursor: "default",
                     }
                   : {}
               }
-              className="w-[8rem] h-[8rem] bg-gradient-to-b from-[#61D2FE] to-[#006EE5]  rounded-[50%] border-4 shadow-neo cursor-pointer transition-all duration-200 ease-in-out"
+              className="h-[4rem] w-[4rem] md:w-[8rem] md:h-[8rem] bg-gradient-to-b from-[#61D2FE] to-[#006EE5]  rounded-[50%] border-4 shadow-neo cursor-pointer transition-all duration-200 ease-in-out"
             >
               <img
                 className="w-full h-full rounded-[50%]"
@@ -51,25 +51,25 @@ const Feedback = () => {
             </div>
           </div>
         ))}
-        <div className="shadow-neoButton w-[30rem] h-[30rem] gap-y-10 flex flex-col items-center justify-center rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <div className="shadow-neoButton h-[15rem] w-[15rem]    md:w-[30rem] md:h-[30rem] gap-y-2 md:gap-y-3 lg:gap-y-10 flex flex-col items-center justify-center rounded-[50%] sm:absolute sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]">
           <div className="flex flex-col justify-center items-center text-center">
             <img
-              className="h-[5rem] w-[5rem] rounded-[50%] border-4 border-white mb-2"
+              className="h-[3rem] w-[3rem] lg:h-[5rem] lg:w-[5rem] rounded-[50%] border-4 border-white mb-2"
               src={testimonials[activeId - 1].imgUrl}
               alt=""
             />
-            <h1 className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-HelveticaBold text-lg">
+            <h1 className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-HelveticaBold md:text-lg">
               TESTIMONIALS
             </h1>
           </div>
-          <p className="text-sm w-[25rem] text-center text-[#95ADC7]">
+          <p className="text-xs md:text-sm w-[15rem]  md:w-[25rem] text-center text-[#95ADC7]">
             {testimonials[activeId - 1].message}
           </p>
           <div className="text-center">
-            <h1 className=" text-lg font-HelveticaBold text-[#233053] mb-1 ">
+            <h1 className=" md:text-lg font-HelveticaBold text-[#233053] mb-1 ">
               {testimonials[activeId - 1].name}
             </h1>
-            <p className="text-sm text-[#95ADC7]">
+            <p className="text-xs md:text-sm text-[#95ADC7]">
               {testimonials[activeId - 1].profession}
             </p>
           </div>

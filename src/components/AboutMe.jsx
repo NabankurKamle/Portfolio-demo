@@ -6,14 +6,16 @@ const AboutMe = () => {
   return (
     <div
       id="aboutme"
-      className="bg-light py-16 flex items-center justify-center gap-10"
+      className="bg-light py-16 flex flex-col lg:flex-row items-center justify-center gap-10"
     >
-      <div className="shadow-neo rounded-xl h-[25rem] w-[22rem] p-2 bg-light">
+      <div className="shadow-neo rounded-xl max-h-[25rem] max-w-[22rem] p-2 bg-light">
         <img className="h-full w-full" src="/img/profileAbout.jpg" alt="" />
       </div>
-      <div className="text-sm w-[38rem] text-[#233053]">
+      <div className="text-sm lg:text-start w-auto lg:w-[38rem] text-[#233053] px-10 sm:px-14 md:px-20 lg:px-0">
         <div className="pb-2">
-          <h1 className="text-3xl font-HelveticaRoundedBold mb-2">About Me</h1>
+          <h1 className="text-3xl font-HelveticaRoundedBold  text-center lg:text-start mb-10 lg:mb-2">
+            About Me
+          </h1>
           <h3 className="font-HelveticaBold mb-1">Nabankur Kamle</h3>
           <p className=" text-[#006EE5]">
             Full Stack Web Developer.React JS.Node JS.

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div id="home" className="px-20 bg-light pb-10 pt-24">
-      <div className=" bg-light w-[100%] shadow-inset rounded-lg flex items-center justify-center gap-48">
-        <div className="w-[35rem] text-start ">
+    <div id="home" className=" px-5 md:px-20 bg-light pb-10 pt-24">
+      <div className=" bg-light w-[100%] shadow-inset rounded-lg flex flex-col md:flex-row items-center justify-between px-10 lg:px-0 lg:justify-center gap-y-10 xl:gap-48">
+        <div className=" md:w-[20rem] lg:min-w-[30rem] pt-5 md:pt-0 text-center md:text-start">
           <h1
             style={{ wordSpacing: "-3px" }}
             className="text-5xl font-HelveticaRoundedBold
@@ -22,7 +22,7 @@ const Home = () => {
             <Link to="">EXPLORE NOW</Link>
           </button>
         </div>
-        <div className="h-[22rem] w-60 relative">
+        <div className="min-h-[22rem] w-60 relative">
           <img
             src="/img/profileHome.png"
             alt=""

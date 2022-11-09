@@ -8,7 +8,7 @@ module.exports = {
       lg: { min: "992px" }, //  Desktop
       // => @media (min-width: 992px) { ... }
 
-      md: { min: "768px" }, //  Tablet
+      md: { min: "796px" }, //  Tablet
       // => @media (min-width: 768px) { ... }
 
       sm: { min: "480px" }, //  Mobile Landscape
