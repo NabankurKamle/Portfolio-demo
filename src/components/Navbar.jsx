@@ -21,7 +21,7 @@ const Navbar = () => {
       style={!showMenu ? { overflow: "hidden" } : { overflow: "visible" }}
       className="w-[100vw] md:fixed bg-light z-50 overflow-hidden relative"
     >
-      <div onClick={handleShowMenu} className="md:hidden fixed top-5 right-5">
+      <div onClick={handleShowMenu} className="md:hidden pl-5 pt-5">
         {showMenu ? (
           <IoClose className="text-xl" />
         ) : (

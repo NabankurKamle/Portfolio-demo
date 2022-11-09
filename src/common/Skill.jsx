@@ -1,6 +1,6 @@
 const Skill = ({ title, knowledge }) => {
   return (
-    <div className=" w-[20rem]  lg:w-[32rem] flex items-center justify-between">
+    <div className=" w-[20rem]  lg:w-[32rem] flex items-center justify-between px-2 sm:px-0">
       <h3 className="text-sm text-[#006EE5]">{title}</h3>
       <div className="flex items-center">
         <div className="h-[12px] px-[4px]  w-[8rem] lg:w-[20rem] rounded-full bg-transparent shadow-neoInsetButton relative flex items-center mr-5">
