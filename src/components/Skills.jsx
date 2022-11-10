@@ -22,7 +22,8 @@ const Skills = ({ handleActiveLink }) => {
     >
       <motion.h1
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
           type: "spring",
           duration: 3,

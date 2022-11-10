@@ -9,7 +9,8 @@ const Footer = () => {
       <div className=" bg-light w-[100%] shadow-neo rounded-lg flex  flex-col text-center py-12 justify-start md:px20 lg:px-40">
         <motion.h1
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 1 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -21,7 +22,8 @@ const Footer = () => {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 1 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -34,8 +36,9 @@ const Footer = () => {
         <div className="border-t border-[#233053] mt-10 pt-10 flex flex-wrap sm:space-x-5 items-start justify-center xl:justify-between px-20">
           <div className="mb-5">
             <motion.h3
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -47,8 +50,9 @@ const Footer = () => {
             </motion.h3>
             <ul className="flex items-center sm:space-y-0 sm:space-x-3">
               <motion.li
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 1,
@@ -61,8 +65,9 @@ const Footer = () => {
                 </Link>
               </motion.li>
               <motion.li
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 1,
@@ -75,8 +80,9 @@ const Footer = () => {
                 </Link>
               </motion.li>
               <motion.li
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 1,
@@ -89,8 +95,9 @@ const Footer = () => {
                 </Link>
               </motion.li>
               <motion.li
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 1,
@@ -107,8 +114,9 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 items-center sm:items-start justify-center sm:space-x-20">
             <div className="text-center sm:text-start text-[#233053]">
               <motion.h3
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 3,
@@ -119,8 +127,9 @@ const Footer = () => {
                 How I works
               </motion.h3>
               <motion.p
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 0.5 }}
                 transition={{
                   type: "spring",
                   duration: 3,
@@ -141,8 +150,9 @@ const Footer = () => {
             </div>
             <div className="text-center sm:text-start text-[#233053]">
               <motion.h3
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 3,
@@ -153,8 +163,9 @@ const Footer = () => {
                 Pricing
               </motion.h3>
               <motion.p
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 3,
@@ -165,8 +176,9 @@ const Footer = () => {
                 Send Message
               </motion.p>
               <motion.p
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 3,
@@ -177,8 +189,9 @@ const Footer = () => {
                 Send Mail
               </motion.p>
               <motion.p
-                initial={{ y: "5vh" }}
-                animate={{ y: 0 }}
+                initial={{ y: "5vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
                   duration: 3,

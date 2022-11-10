@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const Home = ({ handleActiveLink }) => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -19,7 +19,8 @@ const Home = ({ handleActiveLink }) => {
         <div className=" md:w-[20rem] lg:min-w-[30rem] pt-5 md:pt-0 text-center md:text-start">
           <motion.h1
             initial={{ y: "5vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ type: "spring", duration: 2, delay: 0.15 }}
             style={{ wordSpacing: "-3px" }}
             className="text-5xl font-HelveticaRoundedBold
@@ -30,7 +31,8 @@ const Home = ({ handleActiveLink }) => {
           </motion.h1>
           <motion.p
             initial={{ y: "5vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{ type: "spring", duration: 2, delay: 0.25 }}
             className="text-xs text-[#41507B] my-4 mb-8 font-HelveticaRoundedBold"
           >
@@ -40,7 +42,8 @@ const Home = ({ handleActiveLink }) => {
           </motion.p>
           <motion.button
             initial={{ y: "5vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{ type: "spring", duration: 2, delay: 0.35 }}
             className="text-[#41507B] font-HelveticaRoundedBold  rounded-lg px-5 py-3 shadow-neoButton hover:shadow-neohover hover:scale-105 active:shadow-neoInset hover:text-[#006EE5] transition-all duration-200 ease-out"
           >
@@ -50,7 +53,8 @@ const Home = ({ handleActiveLink }) => {
         <div className="min-h-[22rem] w-60 relative">
           <motion.img
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{ type: "spring", duration: 3, delay: 0.35 }}
             src="/img/profileHome.png"
             alt=""

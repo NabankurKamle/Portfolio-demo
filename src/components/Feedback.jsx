@@ -27,7 +27,8 @@ const Feedback = ({ handleActiveLink }) => {
     >
       <motion.h1
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
           type: "spring",
           duration: 3,
@@ -51,8 +52,9 @@ const Feedback = ({ handleActiveLink }) => {
             className="w-auto sm:w-[13rem] md:w-[25rem] lg:w-[45rem] xl:w-[40rem] px-1 inline-block sm:flex justify-center"
           >
             <motion.div
-              initial={{ y: "5vh", scale: 0.95 }}
-              animate={{ y: 0, scale: 1 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -82,7 +84,8 @@ const Feedback = ({ handleActiveLink }) => {
         ))}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -114,8 +117,9 @@ const Feedback = ({ handleActiveLink }) => {
         </motion.div>
       </div>
       <motion.button
-        initial={{ y: "5vh" }}
-        animate={{ y: 0 }}
+        initial={{ y: "5vh", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
           type: "spring",
           duration: 3,

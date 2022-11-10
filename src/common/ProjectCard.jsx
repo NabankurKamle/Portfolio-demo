@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
-      initial={{ y: "5vh" }}
-      animate={{ y: 0 }}
+      initial={{ y: "5vh", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{
         type: "spring",
         duration: 2,

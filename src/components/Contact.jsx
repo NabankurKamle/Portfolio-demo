@@ -23,7 +23,8 @@ const Contact = ({ handleActiveLink }) => {
     >
       <motion.h1
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
           type: "spring",
           duration: 3,
@@ -37,8 +38,9 @@ const Contact = ({ handleActiveLink }) => {
         <div className="">
           <form action="contact" className="flex flex-col space-y-3 items-end ">
             <motion.div
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -60,8 +62,9 @@ const Contact = ({ handleActiveLink }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -83,8 +86,9 @@ const Contact = ({ handleActiveLink }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -107,8 +111,9 @@ const Contact = ({ handleActiveLink }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -130,8 +135,9 @@ const Contact = ({ handleActiveLink }) => {
               />
             </motion.div>
             <motion.button
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -143,8 +149,9 @@ const Contact = ({ handleActiveLink }) => {
               Send Message
             </motion.button>
             <motion.p
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -161,7 +168,8 @@ const Contact = ({ handleActiveLink }) => {
           <div className="h-[20rem] w-[22rem] hidden lg:block">
             <motion.img
               initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ type: "spring", duration: 3, delay: 0.35 }}
               src="/img/contactImg.png"
               alt=""
@@ -169,8 +177,9 @@ const Contact = ({ handleActiveLink }) => {
           </div>
           <div className="flex flex-col lg:flex-row items-end lg:items-center justify-center space-y-5 lg:space-y-0 lg:space-x-5">
             <motion.div
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,
@@ -187,8 +196,9 @@ const Contact = ({ handleActiveLink }) => {
               </p>
             </motion.div>
             <motion.div
-              initial={{ y: "5vh" }}
-              animate={{ y: 0 }}
+              initial={{ y: "5vh", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 3,

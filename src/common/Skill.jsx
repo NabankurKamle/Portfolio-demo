@@ -8,8 +8,9 @@ const Skill = ({ title, knowledge }) => {
       <div className="flex items-center">
         <div className="h-[12px] px-[4px]  w-[8rem] lg:w-[20rem] rounded-full bg-transparent shadow-neoInsetButton relative flex items-center mr-5">
           <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: `calc(${knowledge}% - 8px)` }}
+            initial={{ width: 0, opacity: 0 }}
+            whileInView={{ width: `calc(${knowledge}% - 8px)`, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,

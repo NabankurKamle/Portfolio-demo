@@ -23,7 +23,8 @@ const AboutMe = ({ handleActiveLink }) => {
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ type: "spring", duration: 3, delay: 0.35 }}
         className="shadow-neo rounded-xl max-h-[25rem] max-w-[22rem] border-8 border-[#E9F2FB] overflow-hidden bg-light"
       >
@@ -37,7 +38,8 @@ const AboutMe = ({ handleActiveLink }) => {
         <div className="pb-2">
           <motion.h1
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,
@@ -49,7 +51,8 @@ const AboutMe = ({ handleActiveLink }) => {
           </motion.h1>
           <motion.h3
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,
@@ -61,7 +64,8 @@ const AboutMe = ({ handleActiveLink }) => {
           </motion.h3>
           <motion.p
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,
@@ -73,8 +77,9 @@ const AboutMe = ({ handleActiveLink }) => {
           </motion.p>
         </div>
         <motion.div
-          initial={{ y: "5vh" }}
-          animate={{ y: 0 }}
+          initial={{ y: "5vh", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -83,8 +88,9 @@ const AboutMe = ({ handleActiveLink }) => {
           className="py-2 border-t-2 border-[#95ADC7] w-[12rem]"
         >
           <motion.p
-            initial={{ y: "5vh" }}
-            animate={{ y: 0 }}
+            initial={{ y: "5vh", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,
@@ -96,8 +102,9 @@ const AboutMe = ({ handleActiveLink }) => {
             <span className="ml-1 text-[#95ADC7] font-Helvetica">India</span>
           </motion.p>
           <motion.p
-            initial={{ y: "5vh" }}
-            animate={{ y: 0 }}
+            initial={{ y: "5vh", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,
@@ -109,8 +116,9 @@ const AboutMe = ({ handleActiveLink }) => {
             <span className="ml-1 text-[#95ADC7] font-Helvetica">Kolkata</span>
           </motion.p>
           <motion.p
-            initial={{ y: "5vh" }}
-            animate={{ y: 0 }}
+            initial={{ y: "5vh", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               duration: 3,
@@ -122,8 +130,9 @@ const AboutMe = ({ handleActiveLink }) => {
           </motion.p>
         </motion.div>
         <motion.p
-          initial={{ y: "10vh" }}
-          animate={{ y: 0 }}
+          initial={{ y: "5vh", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -139,7 +148,8 @@ const AboutMe = ({ handleActiveLink }) => {
           <ul className="flex flex-wrap gap-y-5 gap-x-5 text-xs py-8">
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -152,7 +162,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -165,7 +176,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -178,7 +190,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -191,7 +204,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -204,7 +218,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -217,7 +232,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -230,7 +246,8 @@ const AboutMe = ({ handleActiveLink }) => {
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -244,8 +261,9 @@ const AboutMe = ({ handleActiveLink }) => {
           </ul>
         </div>
         <motion.button
-          initial={{ y: "5vh" }}
-          animate={{ y: 0 }}
+          initial={{ y: "5vh", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 1 }}
           transition={{
             type: "spring",
             duration: 3,

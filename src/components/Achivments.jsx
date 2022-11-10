@@ -36,7 +36,8 @@ const Achivements = ({ handleActiveLink }) => {
       <div className="max-w-[27rem] text-center md:text-start px-5 md:px-0">
         <motion.h1
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 1 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -48,7 +49,8 @@ const Achivements = ({ handleActiveLink }) => {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
             duration: 3,
@@ -62,7 +64,8 @@ const Achivements = ({ handleActiveLink }) => {
         <div className="text-start">
           <motion.div
             initial={{ y: "5vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -89,7 +92,8 @@ const Achivements = ({ handleActiveLink }) => {
           </motion.div>
           <motion.div
             initial={{ y: "5vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -116,7 +120,8 @@ const Achivements = ({ handleActiveLink }) => {
           </motion.div>
           <motion.div
             initial={{ y: "5vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -146,7 +151,8 @@ const Achivements = ({ handleActiveLink }) => {
         <div className=" flex flex-col gap-10">
           <motion.div
             initial={{ y: "5vh", scale: 0.95 }}
-            animate={{ y: 0, scale: 1 }}
+            whileInView={{ y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -159,7 +165,8 @@ const Achivements = ({ handleActiveLink }) => {
           </motion.div>
           <motion.div
             initial={{ y: "5vh", scale: 0.95 }}
-            animate={{ y: 0, scale: 1 }}
+            whileInView={{ y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -172,7 +179,8 @@ const Achivements = ({ handleActiveLink }) => {
           </motion.div>
           <motion.div
             initial={{ y: "5vh", scale: 0.95 }}
-            animate={{ y: 0, scale: 1 }}
+            whileInView={{ y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -190,7 +198,8 @@ const Achivements = ({ handleActiveLink }) => {
         <div className="flex flex-col gap-10">
           <motion.div
             initial={{ y: "5vh", scale: 0.95 }}
-            animate={{ y: 0, scale: 1 }}
+            whileInView={{ y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -206,7 +215,8 @@ const Achivements = ({ handleActiveLink }) => {
           </motion.div>
           <motion.div
             initial={{ y: "5vh", scale: 0.95 }}
-            animate={{ y: 0, scale: 1 }}
+            whileInView={{ y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -222,7 +232,8 @@ const Achivements = ({ handleActiveLink }) => {
           </motion.div>
           <motion.div
             initial={{ y: "5vh", scale: 0.95 }}
-            animate={{ y: 0, scale: 1 }}
+            whileInView={{ y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
@@ -239,7 +250,8 @@ const Achivements = ({ handleActiveLink }) => {
         </div>
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
             duration: 3,
