@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
       <div
         style={!showMenu ? { right: "-100vw" } : { right: "0px" }}
-        className="md:static absolute transition-all duration-300 ease-out bg-light w-full top-10"
+        className="md:static absolute transition-all duration-300 ease-out bg-light w-full top-10 "
       >
         <ul className="flex flex-col md:flex-row items-center justify-center py-8 space-y-10 md:space-y-0 md:space-x-4 sm:flex z-20">
           {links.map((link) => (
