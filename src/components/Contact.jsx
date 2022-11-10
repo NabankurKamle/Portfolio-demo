@@ -2,10 +2,69 @@ import { GrSend } from "react-icons/gr";
 import { IoCall } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = ({ handleActiveLink }) => {
+  const [nameValue, setNameValue] = useState("");
+  const [emailValue, setEmailValue] = useState("");
+  const [numberValue, setNumberValue] = useState("");
+  const [messageValue, setMessageValue] = useState("");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_wtncgvs",
+        "template_kq9xxyy",
+        form.current,
+        "N5nu6FfwhcgZXlEFd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setNameValue("");
+    setEmailValue("");
+    setNumberValue("");
+    setMessageValue("");
+
+    toast.success("Email sent successfully", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const handleName = (e) => {
+    e.preventDefault();
+    setNameValue(e.target.value);
+  };
+  const handleEmail = (e) => {
+    e.preventDefault();
+    setEmailValue(e.target.value);
+  };
+  const handleNumber = (e) => {
+    e.preventDefault();
+    setNumberValue(e.target.value);
+  };
+  const handleMessage = (e) => {
+    e.preventDefault();
+    setMessageValue(e.target.value);
+  };
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -36,7 +95,11 @@ const Contact = ({ handleActiveLink }) => {
       </motion.h1>
       <div className="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
         <div className="">
-          <form action="contact" className="flex flex-col space-y-3 items-end ">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col space-y-3 items-end "
+          >
             <motion.div
               initial={{ y: "5vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -50,15 +113,17 @@ const Contact = ({ handleActiveLink }) => {
             >
               <label
                 className="mt-1 font-HelveticaRoundedBold text-[#006EE5]"
-                htmlFor="name"
+                htmlFor="user_name"
               >
                 Name
               </label>
               <input
                 className="w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
                 type="text"
-                name="name"
+                name="user_name"
                 placeholder="Type your full name here"
+                value={nameValue}
+                onChange={handleName}
               />
             </motion.div>
             <motion.div
@@ -74,14 +139,16 @@ const Contact = ({ handleActiveLink }) => {
             >
               <label
                 className="mt-1 font-HelveticaRoundedBold text-[#006EE5]"
-                htmlFor="email"
+                htmlFor="user_email"
               >
                 Email
               </label>
               <input
                 className="w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
                 type="email"
-                name="email"
+                name="user_email"
+                value={emailValue}
+                onChange={handleEmail}
                 placeholder="ex: hello@hello.ai"
               />
             </motion.div>
@@ -98,14 +165,16 @@ const Contact = ({ handleActiveLink }) => {
             >
               <label
                 className="mt-1 font-HelveticaRoundedBold text-[#006EE5]"
-                htmlFor="number"
+                htmlFor="user_number"
               >
                 Number
               </label>
               <input
                 className="w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
                 type="tel"
-                name="number"
+                name="user_number"
+                value={numberValue}
+                onChange={handleNumber}
                 pattern="[0-9]{10}"
                 placeholder="ex: 0123456789"
               />
@@ -131,6 +200,8 @@ const Contact = ({ handleActiveLink }) => {
                 className="w-[12rem] sm:w-[20rem] h-28 py-3 resize-none outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
                 type="text"
                 name="message"
+                value={messageValue}
+                onChange={handleMessage}
                 placeholder="Type your full message here"
               />
             </motion.div>
@@ -143,6 +214,7 @@ const Contact = ({ handleActiveLink }) => {
                 duration: 3,
                 delay: 0.6,
               }}
+              type="submit"
               className="w-[12rem] sm:w-[20rem] h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out "
             >
               <GrSend className="mr-3 text-2xl" />
@@ -162,6 +234,7 @@ const Contact = ({ handleActiveLink }) => {
               For any enquaries, any suggestion, or appreciation you can send a
               message anytime
             </motion.p>
+            <ToastContainer />
           </form>
         </div>
         <div className="max-w-[32rem] flex justify-between items-end lg:items-center flex-col">
@@ -208,7 +281,7 @@ const Contact = ({ handleActiveLink }) => {
             >
               <button className="w-[12rem] sm:w-[20rem] lg:w-auto px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out ">
                 <HiOutlineMail className="mr-3 text-2xl" />
-                nabankur@gmail.com
+                nkrkamle@gmail.com
               </button>
               <p className="text-xs w-[12rem] sm:w-[20rem] text-center px-5 mt-3 text-[#95ADC7]">
                 You can directly mail me any time from Mon-Fri for business

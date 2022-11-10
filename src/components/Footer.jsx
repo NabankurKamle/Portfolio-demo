@@ -60,9 +60,12 @@ const Footer = () => {
                 }}
                 className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0165E1]"
               >
-                <Link to="">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=100029607223964"
+                >
                   <FaFacebookF />
-                </Link>
+                </a>
               </motion.li>
               <motion.li
                 initial={{ y: "5vh", opacity: 0 }}
@@ -75,9 +78,12 @@ const Footer = () => {
                 }}
                 className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#bc2a8d]"
               >
-                <Link to="">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/nabankur_kamle/"
+                >
                   <BsInstagram />
-                </Link>
+                </a>
               </motion.li>
               <motion.li
                 initial={{ y: "5vh", opacity: 0 }}
@@ -90,9 +96,12 @@ const Footer = () => {
                 }}
                 className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0A66C2]"
               >
-                <Link to="">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/nabankurkamle/"
+                >
                   <FaLinkedinIn />
-                </Link>
+                </a>
               </motion.li>
               <motion.li
                 initial={{ y: "5vh", opacity: 0 }}
@@ -105,9 +114,9 @@ const Footer = () => {
                 }}
                 className="text-lg sm:text-2xl p-2 sm:p-3 hover:shadow-neoInsetButton transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#F1502F]"
               >
-                <Link to="">
+                <a target="_blank" href="https://github.com/NabankurKamle">
                   <BsGithub />
-                </Link>
+                </a>
               </motion.li>
             </ul>
           </div>
