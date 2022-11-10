@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Achivements from "./components/Achivments";
@@ -10,16 +11,22 @@ import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 
 function App() {
+  const [activeLink, setActiveLink] = useState(1);
+
+  const handleActiveLink = (id) => {
+    setActiveLink(id);
+  };
+
   return (
     <div className="font-Helvetica">
-      <Navbar />
-      <Home />
-      <Achivements />
-      <AboutMe />
-      <Skills />
-      <Portfolio />
-      <Feedback />
-      <Contact />
+      <Navbar handleActiveLink={handleActiveLink} activeLink={activeLink} />
+      <Home handleActiveLink={handleActiveLink} />
+      <Achivements handleActiveLink={handleActiveLink} />
+      <AboutMe handleActiveLink={handleActiveLink} />
+      <Skills handleActiveLink={handleActiveLink} />
+      <Portfolio handleActiveLink={handleActiveLink} />
+      <Feedback handleActiveLink={handleActiveLink} />
+      <Contact handleActiveLink={handleActiveLink} />
       <Footer />
     </div>
   );

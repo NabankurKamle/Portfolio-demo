@@ -11,15 +11,27 @@ import {
   faNode,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
-
 import { SiTailwindcss, SiRedux } from "react-icons/si";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import CountUp from "react-countup";
 
-const Achivements = () => {
+const Achivements = ({ handleActiveLink }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveLink(2);
+    }
+  }, [inView]);
   return (
     <div
+      ref={ref}
       id="achivments"
-      className="bg-light py-16 flex flex-col md:flex-row items-center justify-center lg:gap-x-36 gap-y-10 md:gap-y-0"
+      className="bg-light pb-16 flex flex-col md:flex-row items-center justify-center lg:gap-x-36 gap-y-10 md:gap-y-0"
     >
       <div className="max-w-[27rem] text-center md:text-start px-5 md:px-0">
         <motion.h1
@@ -67,7 +79,7 @@ const Achivements = () => {
             </div>
             <div className="">
               <h1 className="text-[#233053] text-3xl font-HelveticaRoundedBold mb-3">
-                2+
+                <CountUp end={2} suffix="+" duration={1} delay={0.15} />
               </h1>
               <p className="text-sm text-[#95ADC7]">
                 2+ years of experience as a full stack web developer with
@@ -94,7 +106,7 @@ const Achivements = () => {
             </div>
             <div className="">
               <h1 className="text-[#233053] text-3xl font-HelveticaRoundedBold mb-3">
-                50+
+                <CountUp end={0} suffix="+" duration={1} delay={0.3} />
               </h1>
               <p className="text-sm text-[#95ADC7]">
                 Happy customers worldwide, working with 100%client satisfaction
@@ -121,7 +133,7 @@ const Achivements = () => {
             </div>
             <div className="">
               <h1 className="text-[#233053] text-3xl font-HelveticaRoundedBold mb-3">
-                5+
+                <CountUp end={0} suffix="+" duration={1} delay={0.45} />
               </h1>
               <p className="text-sm text-[#95ADC7]">
                 Honors and awards of national and international field.

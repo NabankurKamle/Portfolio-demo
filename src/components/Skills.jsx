@@ -1,10 +1,22 @@
 import skills from "../collections/skills";
 import Skill from "../common/Skill";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-const Skills = () => {
+const Skills = ({ handleActiveLink }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveLink(4);
+    }
+  }, [inView]);
   return (
     <div
+      ref={ref}
       id="skills"
       className="bg-light py-16 flex flex-col items-center justify-center"
     >

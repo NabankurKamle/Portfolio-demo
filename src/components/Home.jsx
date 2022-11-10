@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-const Home = () => {
+const Home = ({ handleActiveLink }) => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveLink(1);
+    }
+  }, [inView]);
   return (
-    <div id="home" className=" px-5 md:px-20 bg-light pb-10 pt-10 sm:pt-24">
+    <div ref={ref} id="home" className=" px-5 md:px-20 bg-light py-10 sm:py-24">
       <div className=" bg-light w-[100%] shadow-inset rounded-lg flex flex-col md:flex-row items-center justify-between px-10 lg:px-0 lg:justify-center gap-y-10 xl:gap-48">
         <div className=" md:w-[20rem] lg:min-w-[30rem] pt-5 md:pt-0 text-center md:text-start">
           <motion.h1

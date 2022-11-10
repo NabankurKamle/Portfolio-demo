@@ -2,10 +2,22 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-const AboutMe = () => {
+const AboutMe = ({ handleActiveLink }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveLink(3);
+    }
+  }, [inView]);
   return (
     <div
+      ref={ref}
       id="aboutme"
       className="bg-light py-16 flex flex-col lg:flex-row items-center justify-center gap-10"
     >

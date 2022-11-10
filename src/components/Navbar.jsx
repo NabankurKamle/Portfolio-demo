@@ -3,14 +3,8 @@ import links from "../collections/navLinks";
 import { Link } from "react-scroll";
 import { IoClose, IoMenu } from "react-icons/io5";
 
-const Navbar = () => {
-  const [activeLink, setActiveLink] = useState(1);
+const Navbar = ({ handleActiveLink, activeLink }) => {
   const [showMenu, setShowMenu] = useState(false);
-
-  const handleActiveLink = (id) => {
-    setActiveLink(id);
-    setShowMenu(false);
-  };
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu);

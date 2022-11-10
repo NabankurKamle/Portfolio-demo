@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 const Skill = ({ title, knowledge }) => {
   return (
@@ -15,12 +16,13 @@ const Skill = ({ title, knowledge }) => {
               delay: 0.3,
               bounce: 0.3,
             }}
-            cla
             style={{ width: `calc(${knowledge}% - 8px)` }}
             className="h-[7px] bg-gradient-to-r from-[#61D2FE] to-[#006EE5] rounded-full"
           ></motion.div>
         </div>
-        <p className="text-sm text-[#95ADC7] mr-10">{knowledge}%</p>
+        <p className="text-sm text-[#95ADC7] mr-10">
+          <CountUp end={knowledge} suffix="%" delay={0.3} duration={3} />
+        </p>
       </div>
     </div>
   );
