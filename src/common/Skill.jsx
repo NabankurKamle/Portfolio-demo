@@ -11,7 +11,7 @@ const Skill = ({ title, knowledge }) => {
             animate={{ width: `calc(${knowledge}% - 8px)` }}
             transition={{
               type: "spring",
-              duration: 5,
+              duration: 3,
               delay: 0.3,
               bounce: 0.3,
             }}
