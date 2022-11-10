@@ -270,14 +270,14 @@ const AboutMe = ({ handleActiveLink }) => {
             delay: 0.15,
           }}
         >
-          <Link
+          <a
             className={
               "text-[#41507B]  rounded-lg px-5 py-3 shadow-neoButton hover:shadow-neohover active:shadow-neoInset hover:text-[#006EE5] transition-all duration-200 font-HelveticaRoundedBold"
             }
-            to=""
+            href="/resume/NabankurKamle_Resume.pdf"
           >
             Download CV <FontAwesomeIcon className="ml-2" icon={faDownload} />
-          </Link>
+          </a>
         </motion.button>
       </div>
     </div>
