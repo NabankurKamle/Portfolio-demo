@@ -124,6 +124,7 @@ const Contact = ({ handleActiveLink }) => {
                 placeholder="Type your full name here"
                 value={nameValue}
                 onChange={handleName}
+                required
               />
             </motion.div>
             <motion.div
@@ -150,6 +151,7 @@ const Contact = ({ handleActiveLink }) => {
                 value={emailValue}
                 onChange={handleEmail}
                 placeholder="ex: hello@hello.ai"
+                required
               />
             </motion.div>
             <motion.div
@@ -177,6 +179,7 @@ const Contact = ({ handleActiveLink }) => {
                 onChange={handleNumber}
                 pattern="[0-9]{10}"
                 placeholder="ex: 0123456789"
+                required
               />
             </motion.div>
             <motion.div
@@ -203,6 +206,7 @@ const Contact = ({ handleActiveLink }) => {
                 value={messageValue}
                 onChange={handleMessage}
                 placeholder="Type your full message here"
+                required
               />
             </motion.div>
             <motion.button
