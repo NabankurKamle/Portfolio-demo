@@ -179,7 +179,6 @@ const Contact = ({ handleActiveLink }) => {
                 onChange={handleNumber}
                 pattern="[0-9]{10}"
                 placeholder="ex: 0123456789"
-                required
               />
             </motion.div>
             <motion.div
