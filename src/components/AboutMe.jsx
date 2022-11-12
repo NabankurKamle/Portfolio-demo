@@ -150,8 +150,8 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
           }}
           className="text-[#95ADC7]"
         >
-          I am a full stack JavaScript &#40;MERN&#41; developer. I've 2 years
-          experience to work with React Js, Node Js and Tailwind CSS. I can
+          I am a fullstack JavaScript &#40;MERN&#41; developer. I've 2 years
+          experience to work with React JS, Node JS and Tailwind CSS. I can
           build and fix or upgrade a fully responsive website.
         </motion.p>
         <div>
