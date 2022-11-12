@@ -62,7 +62,7 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             darkmode ? "text-dark" : "text-light"
           } text-3xl font-HelveticaRoundedBold mb-10`}
         >
-          I've been fortunateto work with and for people from some{" "}
+          I've been fortunate to work with and for people from some{" "}
           <span className="text-[#006EE5]">amazing organisation</span>
         </motion.p>
         <div className="text-start">
