@@ -12,11 +12,11 @@ const skills = [
     knowledge: 75,
   },
   {
-    title: "React Js",
+    title: "React JS",
     knowledge: 90,
   },
   {
-    title: "Node Js",
+    title: "Node JS",
     knowledge: 70,
   },
   {
@@ -24,7 +24,7 @@ const skills = [
     knowledge: 85,
   },
   {
-    title: "Express Js",
+    title: "Express JS",
     knowledge: 65,
   },
   {
