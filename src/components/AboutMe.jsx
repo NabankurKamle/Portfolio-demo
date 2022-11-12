@@ -35,7 +35,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
         } rounded-xl max-h-[25rem] max-w-[22rem] border-8 overflow-hidden`}
       >
         <img
-          className="max-h-[23rem] max-w-[20rem] hover:scale-[1.05]  rounded-xl transition-all duration-500"
+          className=" max-h-[15rem] max-w-[13rem] sm:max-h-[23rem]  sm:max-w-[20rem] hover:scale-[1.05]  rounded-xl transition-all duration-500"
           src="/img/profileAbout.jpg"
           alt=""
         />
