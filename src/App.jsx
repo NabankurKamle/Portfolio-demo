@@ -11,13 +11,19 @@ import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
   const [darkmode, setDarkmode] = useState(true);
   const [activeLink, setActiveLink] = useState(1);
+
+  const handleShowMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   const handleDarkMode = () => setDarkmode(!darkmode);
 
   const handleActiveLink = (id) => {
     setActiveLink(id);
+    setShowMenu(false);
   };
 
   return (
@@ -27,6 +33,8 @@ function App() {
         activeLink={activeLink}
         darkmode={darkmode}
         handleDarkMode={handleDarkMode}
+        showMenu={showMenu}
+        handleShowMenu={handleShowMenu}
       />
       <Home handleActiveLink={handleActiveLink} darkmode={darkmode} />
       <Achivements handleActiveLink={handleActiveLink} darkmode={darkmode} />

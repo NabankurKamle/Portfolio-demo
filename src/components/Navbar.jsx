@@ -4,13 +4,14 @@ import { Link } from "react-scroll";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { ImSwitch } from "react-icons/im";
 
-const Navbar = ({ handleActiveLink, activeLink, handleDarkMode, darkmode }) => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const handleShowMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
+const Navbar = ({
+  handleActiveLink,
+  activeLink,
+  handleDarkMode,
+  darkmode,
+  handleShowMenu,
+  showMenu,
+}) => {
   return (
     <div
       style={!showMenu ? { overflow: "hidden" } : { overflow: "visible" }}
@@ -18,11 +19,15 @@ const Navbar = ({ handleActiveLink, activeLink, handleDarkMode, darkmode }) => {
         darkmode ? "bg-dark" : "bg-light"
       } z-50 overflow-hidden relative`}
     >
-      <div onClick={handleShowMenu} className="md:hidden pl-5 pt-5">
+      <div onClick={() => handleShowMenu()} className="md:hidden pl-5 pt-5">
         {showMenu ? (
-          <IoClose className="text-xl" />
+          <IoClose
+            className={`${darkmode ? "text-dark" : "text-light"} text-xl`}
+          />
         ) : (
-          <IoMenu className="text-xl" />
+          <IoMenu
+            className={`${darkmode ? "text-dark" : "text-light"} text-xl`}
+          />
         )}
       </div>
       <div
@@ -42,7 +47,7 @@ const Navbar = ({ handleActiveLink, activeLink, handleDarkMode, darkmode }) => {
                           ? "bg-dark shadow-neoInsetButtonDark"
                           : "bg-light shadow-neoInsetButton"
                       } text-[#006EE5] text-sm text-center px-6`
-                    : `hover:shadow-neoButton min-w-[8rem] md:min-w-[10rem] py-3 rounded-lg transition-all ease-out duration-100 delay-75 ${
+                    : `min-w-[8rem] md:min-w-[10rem] py-3 rounded-lg transition-all ease-out duration-100 delay-75 ${
                         darkmode
                           ? "bg-dark hover:shadow-neoButtonDark text-dark"
                           : "bg-light hover:shadow-neoButton text-light"
