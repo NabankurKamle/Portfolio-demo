@@ -66,8 +66,8 @@ const Navbar = ({ handleActiveLink, activeLink, handleDarkMode, darkmode }) => {
         onClick={() => handleDarkMode()}
         className={`${
           darkmode
-            ? "shadow-neoButtonDark hover:shadow-neoInsetDark text-dark"
-            : "shadow-neoButton hover:shadow-neohover text-light"
+            ? "shadow-neoButtonDark hover:shadow-neoInsetDark text-dark bg-dark"
+            : "shadow-neoButton hover:shadow-neohover text-light bg-light"
         } fixed md:top-5 lg:right-8 right-5 top-3 p-3 rounded-lg cursor-pointer transform transition-all duration-300 hover:text-[#006EE5] z-[100]`}
       >
         <ImSwitch className="text-xl" />
