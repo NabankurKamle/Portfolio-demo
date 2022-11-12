@@ -8,7 +8,7 @@ const Footer = ({ darkmode }) => {
       id="footer"
       className={`${
         darkmode ? "bg-dark" : "bg-light"
-      } px-10 sm:px-20 bg-light pb-10 pt-24`}
+      } px-10 sm:px-20 pb-10 pt-24`}
     >
       <div
         className={`${
