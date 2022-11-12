@@ -34,9 +34,24 @@ module.exports = {
         inset: "-8px -8px 8px #F6FAFD inset, 8px 8px 8px #C6D2E0 inset",
         insetInput: "-4px -4px 4px #F6FAFD inset, 4px 4px 4px #C6D2E0 inset",
         neoButton: "5px 5px 12px #C6D2E0,-5px -5px 12px #F6FAFD",
+        neoDark: "8px 8px 12px #021221,-8px -8px 12px #06233d",
+        neohoverDark: "12px 12px 15px #021221,-12px -12px 15px #06233d",
+        neoInsetDark:
+          "8px 8px 12px #021221,-8px -8px 12px #06233d,-5px -5px 5px #06233d inset,5px 5px 5px #021221 inset",
+        neoInsetButtonDark:
+          "5px 5px 8px #021221,-5px -5px 8px #06233d,-3px -3px 5px #06233d inset,3px 3px 5px #021221 inset",
+        insetDark: "-8px -8px 8px #06233d inset, 8px 8px 8px #021221 inset",
+        insetInputDark:
+          "-4px -4px 4px #06233d inset, 4px 4px 4px #021221 inset",
+        neoButtonDark: "5px 5px 12px #021221,-5px -5px 12px #06233d",
       },
       backgroundColor: {
         light: "#E9F2FB",
+        dark: "#001830",
+      },
+      colors: {
+        light: "#41507B",
+        dark: "#5a74bb",
       },
     },
   },

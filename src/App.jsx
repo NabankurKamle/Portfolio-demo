@@ -11,7 +11,10 @@ import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 
 function App() {
+  const [darkmode, setDarkmode] = useState(false);
   const [activeLink, setActiveLink] = useState(1);
+
+  const handleDarkMode = () => setDarkmode(!darkmode);
 
   const handleActiveLink = (id) => {
     setActiveLink(id);
@@ -19,15 +22,20 @@ function App() {
 
   return (
     <div className="font-Helvetica">
-      <Navbar handleActiveLink={handleActiveLink} activeLink={activeLink} />
-      <Home handleActiveLink={handleActiveLink} />
-      <Achivements handleActiveLink={handleActiveLink} />
-      <AboutMe handleActiveLink={handleActiveLink} />
-      <Skills handleActiveLink={handleActiveLink} />
-      <Portfolio handleActiveLink={handleActiveLink} />
-      <Feedback handleActiveLink={handleActiveLink} />
-      <Contact handleActiveLink={handleActiveLink} />
-      <Footer />
+      <Navbar
+        handleActiveLink={handleActiveLink}
+        activeLink={activeLink}
+        darkmode={darkmode}
+        handleDarkMode={handleDarkMode}
+      />
+      <Home handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <Achivements handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <AboutMe handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <Skills handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <Portfolio handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <Feedback handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <Contact handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      <Footer darkmode={darkmode} />
     </div>
   );
 }

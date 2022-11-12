@@ -1,4 +1,4 @@
-import { GrSend } from "react-icons/gr";
+import { FiSend } from "react-icons/fi";
 import { IoCall } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Contact = ({ handleActiveLink }) => {
+const Contact = ({ handleActiveLink, darkmode }) => {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [numberValue, setNumberValue] = useState("");
@@ -78,7 +78,9 @@ const Contact = ({ handleActiveLink }) => {
     <div
       ref={ref}
       id="contact"
-      className="bg-light py-16 flex flex-col items-center justify-center"
+      className={`${
+        darkmode ? "bg-dark" : "bg-light"
+      } py-16 flex flex-col items-center justify-center`}
     >
       <motion.h1
         initial={{ opacity: 0 }}
@@ -89,7 +91,9 @@ const Contact = ({ handleActiveLink }) => {
           duration: 3,
           delay: 0.15,
         }}
-        className="text-center text-4xl font-HelveticaRoundedBold  text-[#233053] mb-10"
+        className={`text-center text-4xl font-HelveticaRoundedBold  ${
+          darkmode ? "text-dark" : "text-light"
+        } mb-10`}
       >
         Contact Me
       </motion.h1>
@@ -98,7 +102,7 @@ const Contact = ({ handleActiveLink }) => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="flex flex-col space-y-3 items-end "
+            className="flex flex-col space-y-3 items-end"
           >
             <motion.div
               initial={{ y: "5vh", opacity: 0 }}
@@ -118,7 +122,11 @@ const Contact = ({ handleActiveLink }) => {
                 Name
               </label>
               <input
-                className="w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
+                className={`${
+                  darkmode
+                    ? "text-dark  shadow-insetInputDark placeholder:text-[#2c5e93]"
+                    : "text-light  shadow-insetInput placeholder:text-[#95ADC7]"
+                } w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent  rounded-md px-5 placeholder:text-sm placeholder:opacity-70 `}
                 type="text"
                 name="user_name"
                 placeholder="Type your full name here"
@@ -145,7 +153,11 @@ const Contact = ({ handleActiveLink }) => {
                 Email
               </label>
               <input
-                className="w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
+                className={`${
+                  darkmode
+                    ? "text-dark  shadow-insetInputDark placeholder:text-[#2c5e93]"
+                    : "text-light  shadow-insetInput placeholder:text-[#95ADC7]"
+                } w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent rounded-md px-5 placeholder:text-sm placeholder:opacity-70`}
                 type="email"
                 name="user_email"
                 value={emailValue}
@@ -172,7 +184,11 @@ const Contact = ({ handleActiveLink }) => {
                 Number
               </label>
               <input
-                className="w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
+                className={`${
+                  darkmode
+                    ? "text-dark  shadow-insetInputDark placeholder:text-[#2c5e93]"
+                    : "text-light  shadow-insetInput placeholder:text-[#95ADC7]"
+                } w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent rounded-md px-5 placeholder:text-sm placeholder:opacity-70`}
                 type="tel"
                 name="user_number"
                 value={numberValue}
@@ -199,7 +215,11 @@ const Contact = ({ handleActiveLink }) => {
                 Message
               </label>
               <textarea
-                className="w-[12rem] sm:w-[20rem] h-28 py-3 resize-none outline-none bg-transparent shadow-insetInput text-[#233053] rounded-md px-5 placeholder:text-sm placeholder:opacity-70 placeholder:text-[#95ADC7]"
+                className={`${
+                  darkmode
+                    ? "text-dark  shadow-insetInputDark placeholder:text-[#2c5e93]"
+                    : "text-light  shadow-insetInput placeholder:text-[#95ADC7]"
+                } w-[12rem] sm:w-[20rem] h-28 py-3 resize-none outline-none bg-transparent rounded-md px-5 placeholder:text-sm placeholder:opacity-70 mb-2`}
                 type="text"
                 name="message"
                 value={messageValue}
@@ -218,9 +238,13 @@ const Contact = ({ handleActiveLink }) => {
                 delay: 0.6,
               }}
               type="submit"
-              className="w-[12rem] sm:w-[20rem] h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out "
+              className={`${
+                darkmode
+                  ? "text-dark  shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark placeholder:text-[#2c5e93]"
+                  : "text-light shadow-neoButton hover:shadow-neohover active:shadow-neoInset placeholder:text-[#95ADC7]"
+              } w-[12rem] sm:w-[20rem] h-14 font-HelveticaRoundedBold flex items-center justify-center text-center hover:scale-105 rounded-lg hover:text-[#006EE5] transition-all duration-100 ease-out`}
             >
-              <GrSend className="mr-3 text-2xl" />
+              <FiSend className="mr-3 text-2xl" />
               Send Message
             </motion.button>
             <motion.p
@@ -240,7 +264,7 @@ const Contact = ({ handleActiveLink }) => {
             <ToastContainer />
           </form>
         </div>
-        <div className="max-w-[32rem] flex justify-between items-end lg:items-center flex-col">
+        <div className="max-w-[32rem] flex justify-center items-end lg:items-center flex-col">
           <div className="h-[20rem] w-[22rem] hidden lg:block">
             <motion.img
               initial={{ opacity: 0, scale: 0.95 }}
@@ -263,7 +287,13 @@ const Contact = ({ handleActiveLink }) => {
               }}
               className=" flex flex-col items-center justify-center"
             >
-              <button className="w-[12rem] sm:w-[20rem] lg:max-w-[11rem] px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out ">
+              <button
+                className={`${
+                  darkmode
+                    ? "text-dark  shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark placeholder:text-[#2c5e93]"
+                    : "text-light shadow-neoButton hover:shadow-neohover active:shadow-neoInset placeholder:text-[#95ADC7]"
+                } w-[12rem] sm:w-[20rem] lg:max-w-[11rem] px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-centerhover:scale-105 rounded-lg hover:text-[#006EE5] transition-all duration-100 ease-out `}
+              >
                 <IoCall className="mr-3 text-2xl" />
                 +6297522799
               </button>
@@ -282,7 +312,13 @@ const Contact = ({ handleActiveLink }) => {
               }}
               className=" flex flex-col items-center justify-center"
             >
-              <button className="w-[12rem] sm:w-[20rem] lg:w-auto px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-center text-[#233053] shadow-neoButton hover:shadow-neohover hover:scale-95 rounded-lg active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out ">
+              <button
+                className={`${
+                  darkmode
+                    ? "text-dark  shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark placeholder:text-[#2c5e93]"
+                    : "text-light shadow-neoButton hover:shadow-neohover active:shadow-neoInset placeholder:text-[#95ADC7]"
+                } w-[12rem] sm:w-[20rem] lg:w-auto px-5 h-14 font-HelveticaRoundedBold flex items-center justify-center text-centerhover:scale-105 rounded-lg hover:text-[#006EE5] transition-all duration-100 ease-out`}
+              >
                 <HiOutlineMail className="mr-3 text-2xl" />
                 nkrkamle@gmail.com
               </button>

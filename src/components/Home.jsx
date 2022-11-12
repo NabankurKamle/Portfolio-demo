@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const Home = ({ handleActiveLink }) => {
+const Home = ({ handleActiveLink, darkmode }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
@@ -14,8 +14,18 @@ const Home = ({ handleActiveLink }) => {
     }
   }, [inView]);
   return (
-    <div ref={ref} id="home" className=" px-5 md:px-20 bg-light py-10 sm:py-24">
-      <div className=" bg-light w-[100%] shadow-inset rounded-lg flex flex-col md:flex-row items-center justify-between px-10 lg:px-0 lg:justify-center gap-y-10 xl:gap-48">
+    <div
+      ref={ref}
+      id="home"
+      className={`${
+        darkmode ? "bg-dark" : "bg-light"
+      } px-5 md:px-20 py-10 sm:py-24`}
+    >
+      <div
+        className={`w-[100%] ${
+          darkmode ? "shadow-insetDark bg-dark" : "shadow-inset bg-light"
+        } rounded-lg flex flex-col md:flex-row items-center justify-between px-10 lg:px-0 lg:justify-center gap-y-10 xl:gap-48`}
+      >
         <div className=" md:w-[20rem] lg:min-w-[30rem] pt-5 md:pt-0 text-center md:text-start">
           <motion.h1
             initial={{ y: "5vh", opacity: 0 }}
@@ -25,7 +35,7 @@ const Home = ({ handleActiveLink }) => {
             style={{ wordSpacing: "-3px" }}
             className="text-5xl font-HelveticaRoundedBold
             bg-gradient-to-b from-[#61D2FE] to-[#006EE5] text-transparent bg-clip-text
-            tracking-tighter textShadow py-3"
+            tracking-tighter py-3"
           >
             Discover my Amazing Work Projects
           </motion.h1>
@@ -34,7 +44,9 @@ const Home = ({ handleActiveLink }) => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 1 }}
             transition={{ type: "spring", duration: 2, delay: 0.25 }}
-            className="text-xs text-[#41507B] my-4 mb-8 font-HelveticaRoundedBold"
+            className={`text-xs ${
+              darkmode ? "text-dark" : "text-light"
+            } my-4 mb-8 font-HelveticaRoundedBold`}
           >
             &lt;<span className="text-sm text-[#006EE5]">code</span>&gt; WEB
             DEVELOPER &lt;/
@@ -45,7 +57,11 @@ const Home = ({ handleActiveLink }) => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 1 }}
             transition={{ type: "spring", duration: 2, delay: 0.35 }}
-            className="text-[#41507B] font-HelveticaRoundedBold  rounded-lg px-5 py-3 shadow-neoButton hover:shadow-neohover hover:scale-105 active:shadow-neoInset hover:text-[#006EE5] transition-all duration-200 ease-out"
+            className={` font-HelveticaRoundedBold ${
+              darkmode
+                ? "shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark text-dark"
+                : "shadow-neoButton hover:shadow-neohover active:shadow-neoInset text-light"
+            } rounded-lg px-5 py-3 hover:scale-105  hover:text-[#006EE5] transition-all duration-200 ease-out`}
           >
             <Link to="">EXPLORE NOW</Link>
           </motion.button>

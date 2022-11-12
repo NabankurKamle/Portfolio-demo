@@ -2,8 +2,9 @@ import { useState } from "react";
 import links from "../collections/navLinks";
 import { Link } from "react-scroll";
 import { IoClose, IoMenu } from "react-icons/io5";
+import { ImSwitch } from "react-icons/im";
 
-const Navbar = ({ handleActiveLink, activeLink }) => {
+const Navbar = ({ handleActiveLink, activeLink, handleDarkMode, darkmode }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = () => {
@@ -13,7 +14,9 @@ const Navbar = ({ handleActiveLink, activeLink }) => {
   return (
     <div
       style={!showMenu ? { overflow: "hidden" } : { overflow: "visible" }}
-      className="w-[100vw] md:fixed bg-light z-50 overflow-hidden relative"
+      className={`w-[100vw] md:fixed ${
+        darkmode ? "bg-dark" : "bg-light"
+      } z-50 overflow-hidden relative`}
     >
       <div onClick={handleShowMenu} className="md:hidden pl-5 pt-5">
         {showMenu ? (
@@ -24,7 +27,9 @@ const Navbar = ({ handleActiveLink, activeLink }) => {
       </div>
       <div
         style={!showMenu ? { right: "-100vw" } : { right: "0px" }}
-        className="md:static absolute transition-all duration-300 ease-out bg-light w-full top-10 "
+        className={`md:static absolute transition-all duration-300 ease-out ${
+          darkmode ? "bg-dark" : "bg-light"
+        } w-full top-10 `}
       >
         <ul className="flex flex-col md:flex-row items-center justify-center py-8 space-y-10 md:space-y-0 md:space-x-4 sm:flex z-20">
           {links.map((link) => (
@@ -32,8 +37,16 @@ const Navbar = ({ handleActiveLink, activeLink }) => {
               <Link
                 className={
                   activeLink === link.id
-                    ? "shadow-neoInsetButton transition-all ease-out duration-100 delay-75 minw-[8rem] md:min-w-[10rem] py-3 rounded-lg  bg-light text-[#006EE5] text-sm text-center px-6"
-                    : "hover:shadow-neoButton minw-[8rem] md:min-w-[10rem] py-3 rounded-lg transition-all ease-out duration-100 delay-75 bg-light text-[#41507B] hover:text-[#006EE5] hover:scale-95 cursor-pointer text-sm text-center px-6"
+                    ? ` transition-all ease-out duration-100 delay-75 minw-[8rem] md:min-w-[10rem] py-3 rounded-lg  ${
+                        darkmode
+                          ? "bg-dark shadow-neoInsetButtonDark"
+                          : "bg-light shadow-neoInsetButton"
+                      } text-[#006EE5] text-sm text-center px-6`
+                    : `hover:shadow-neoButton min-w-[8rem] md:min-w-[10rem] py-3 rounded-lg transition-all ease-out duration-100 delay-75 ${
+                        darkmode
+                          ? "bg-dark hover:shadow-neoButtonDark text-dark"
+                          : "bg-light hover:shadow-neoButton text-light"
+                      } hover:text-[#006EE5] hover:scale-95 cursor-pointer text-sm text-center px-6`
                 }
                 onClick={() => handleActiveLink(link.id)}
                 to={link.url}
@@ -48,6 +61,16 @@ const Navbar = ({ handleActiveLink, activeLink }) => {
             </li>
           ))}
         </ul>
+      </div>
+      <div
+        onClick={() => handleDarkMode()}
+        className={`${
+          darkmode
+            ? "shadow-neoButtonDark hover:shadow-neoInsetDark text-dark"
+            : "shadow-neoButton hover:shadow-neohover text-light"
+        } fixed md:top-5 lg:right-8 right-5 top-3 p-3 rounded-lg cursor-pointer transform transition-all duration-300 hover:text-[#006EE5] z-[100]`}
+      >
+        <ImSwitch className="text-xl" />
       </div>
     </div>
   );

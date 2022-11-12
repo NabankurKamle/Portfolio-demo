@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const AboutMe = ({ handleActiveLink }) => {
+const AboutMe = ({ handleActiveLink, darkmode }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -19,14 +19,20 @@ const AboutMe = ({ handleActiveLink }) => {
     <div
       ref={ref}
       id="aboutme"
-      className="bg-light py-16 flex flex-col lg:flex-row items-center justify-center gap-10"
+      className={`${
+        darkmode ? "bg-dark" : "bg-light"
+      } py-16 flex flex-col lg:flex-row items-center justify-center gap-10`}
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ type: "spring", duration: 3, delay: 0.35 }}
-        className="shadow-neo rounded-xl max-h-[25rem] max-w-[22rem] border-8 border-[#E9F2FB] overflow-hidden bg-light"
+        className={`${
+          darkmode
+            ? "bg-dark shadow-neoDark border-[#001830]"
+            : "bg-light shadow-neo border-[#E9F2FB]"
+        } rounded-xl max-h-[25rem] max-w-[22rem] border-8 overflow-hidden`}
       >
         <img
           className="max-h-[23rem] max-w-[20rem] hover:scale-[1.05]  rounded-xl transition-all duration-500"
@@ -34,7 +40,11 @@ const AboutMe = ({ handleActiveLink }) => {
           alt=""
         />
       </motion.div>
-      <div className="text-sm lg:text-start w-auto lg:w-[38rem] text-[#233053] px-10 sm:px-14 md:px-20 lg:px-0">
+      <div
+        className={`${
+          darkmode ? "text-dark" : "text-light"
+        } text-sm lg:text-start w-auto lg:w-[38rem] px-10 sm:px-14 md:px-20 lg:px-0`}
+      >
         <div className="pb-2">
           <motion.h1
             initial={{ opacity: 0 }}
@@ -156,7 +166,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.15,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>HTML</p>
             </motion.li>
@@ -170,7 +184,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.2,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>CSS</p>
             </motion.li>
@@ -184,7 +202,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.25,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>JavaScript</p>
             </motion.li>
@@ -198,7 +220,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.3,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>React JS</p>
             </motion.li>
@@ -212,7 +238,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.35,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>Node JS</p>
             </motion.li>
@@ -226,7 +256,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.4,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>MongoDB</p>
             </motion.li>
@@ -240,7 +274,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.45,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>Express JS</p>
             </motion.li>
@@ -254,7 +292,11 @@ const AboutMe = ({ handleActiveLink }) => {
                 delay: 0.5,
                 delayChildren: 1,
               }}
-              className="px-5 py-1 shadow-neoButton hover:shadow-neoInsetButton transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full"
+              className={`${
+                darkmode
+                  ? " shadow-neoButtonDark hover:shadow-neoInsetButtonDark"
+                  : " shadow-neoButton hover:shadow-neoInsetButton"
+              } px-5 py-1 transition-all duration-100 delay-75 ease-out hover:text-[#006EE5] hover:scale-95 cursor-pointer rounded-full`}
             >
               <p>Tailwind CSS</p>
             </motion.li>
@@ -271,9 +313,11 @@ const AboutMe = ({ handleActiveLink }) => {
           }}
         >
           <a
-            className={
-              "text-[#41507B]  rounded-lg px-5 py-3 shadow-neoButton hover:shadow-neohover active:shadow-neoInset hover:text-[#006EE5] transition-all duration-200 font-HelveticaRoundedBold"
-            }
+            className={`${
+              darkmode
+                ? "text-dark shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark"
+                : "text-light shadow-neoButton hover:shadow-neohover active:shadow-neoInset"
+            } rounded-lg px-5 py-3 hover:text-[#006EE5] transition-all duration-200 font-HelveticaRoundedBold`}
             href="/resume/NabankurKamle_Resume.pdf"
           >
             Download CV <FontAwesomeIcon className="ml-2" icon={faDownload} />

@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-const Feedback = ({ handleActiveLink }) => {
+const Feedback = ({ handleActiveLink, darkmode }) => {
   const [activeId, setActiveId] = useState(1);
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -23,7 +23,9 @@ const Feedback = ({ handleActiveLink }) => {
     <div
       ref={ref}
       id="feedback"
-      className="bg-light py-16 flex flex-col items-center justify-center"
+      className={`${
+        darkmode ? "bg-dark" : "bg-light"
+      } py-16 flex flex-col items-center justify-center`}
     >
       <motion.h1
         initial={{ opacity: 0 }}
@@ -34,7 +36,9 @@ const Feedback = ({ handleActiveLink }) => {
           duration: 3,
           delay: 0.15,
         }}
-        className="text-center text-4xl font-HelveticaRoundedBold  text-[#233053] mb-10"
+        className={`${
+          darkmode ? "text-dark" : "text-light"
+        } text-center text-4xl font-HelveticaRoundedBold mb-10`}
       >
         Clients Feedback
       </motion.h1>
@@ -72,7 +76,13 @@ const Feedback = ({ handleActiveLink }) => {
                     }
                   : {}
               }
-              className="h-[4rem] w-[4rem] md:w-[8rem] md:h-[8rem] bg-gradient-to-b from-[#61D2FE] to-[#006EE5]  rounded-[50%] border-4 shadow-neo cursor-pointer transition-all duration-200 ease-in-out"
+              className={`h-[4rem] w-[4rem] md:w-[8rem] md:h-[8rem] bg-gradient-to-b from-[#61D2FE] to-[#006EE5]  rounded-[50%] border-4
+              ${
+                darkmode
+                  ? "shadow-neoDark border-[#001830]"
+                  : "shadow-neo border-[#E9F2FB]"
+              }
+              cursor-pointer transition-all duration-200 ease-in-out`}
             >
               <img
                 className="w-full h-full rounded-[50%]"
@@ -91,11 +101,17 @@ const Feedback = ({ handleActiveLink }) => {
             duration: 3,
             delay: 0.15,
           }}
-          className="shadow-neoButton h-[15rem] w-[15rem] md:w-[30rem] md:h-[30rem] gap-y-2 md:gap-y-3 lg:gap-y-10 flex flex-col items-center justify-center rounded-[50%] sm:absolute sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]"
+          className={`${
+            darkmode
+              ? "shadow-neoButtonDark border-[#001830]"
+              : "shadow-neoButton border-[#E9F2FB]"
+          }  h-[15rem] w-[15rem] md:w-[30rem] md:h-[30rem] gap-y-2 md:gap-y-3 lg:gap-y-10 flex flex-col items-center justify-center rounded-[50%] sm:absolute sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]`}
         >
           <div className="flex flex-col justify-center items-center text-center">
             <img
-              className="h-[3rem] w-[3rem] lg:h-[5rem] lg:w-[5rem] rounded-[50%] border-4 border-white mb-2"
+              className={`h-[3rem] w-[3rem] lg:h-[5rem] lg:w-[5rem] rounded-[50%] border-4 ${
+                darkmode ? "border-[#004895]" : "border-[#FFFFFF]"
+              } mb-2`}
               src={testimonials[activeId - 1].imgUrl}
               alt=""
             />
@@ -107,7 +123,11 @@ const Feedback = ({ handleActiveLink }) => {
             {testimonials[activeId - 1].message}
           </p>
           <div className="text-center">
-            <h1 className=" md:text-lg font-HelveticaBold text-[#233053] mb-1 ">
+            <h1
+              className={`${
+                darkmode ? "text-dark" : "text-light"
+              } md:text-lg font-HelveticaBold mb-1 `}
+            >
               {testimonials[activeId - 1].name}
             </h1>
             <p className="text-xs md:text-sm text-[#95ADC7]">
@@ -125,7 +145,11 @@ const Feedback = ({ handleActiveLink }) => {
           duration: 3,
           delay: 0.3,
         }}
-        className="text-[#41507B] font-HelveticaRoundedBold  rounded-lg px-12 py-3 shadow-neoButton hover:shadow-neohover hover:scale-95 active:shadow-neoInset hover:text-[#006EE5] transition-all duration-100 ease-out"
+        className={`${
+          darkmode
+            ? "text-dark shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark"
+            : "text-light shadow-neoButton hover:shadow-neohover active:shadow-neoInset"
+        } font-HelveticaRoundedBold  rounded-lg px-12 py-3 hover:scale-95 hover:text-[#006EE5] transition-all duration-100 ease-out`}
       >
         <Link to="">Show All</Link>
       </motion.button>

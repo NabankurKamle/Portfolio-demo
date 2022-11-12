@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const Skills = ({ handleActiveLink }) => {
+const Skills = ({ handleActiveLink, darkmode }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -18,7 +18,9 @@ const Skills = ({ handleActiveLink }) => {
     <div
       ref={ref}
       id="skills"
-      className="bg-light py-16 flex flex-col items-center justify-center"
+      className={`${
+        darkmode ? "bg-dark" : "bg-light"
+      } py-16 flex flex-col items-center justify-center`}
     >
       <motion.h1
         initial={{ opacity: 0 }}
@@ -30,13 +32,20 @@ const Skills = ({ handleActiveLink }) => {
           delay: 0.15,
         }}
         cla
-        className="text-center text-4xl font-HelveticaRoundedBold  text-[#233053] mb-10"
+        className={`text-center text-4xl font-HelveticaRoundedBold  ${
+          darkmode ? "text-dark" : "text-light"
+        } mb-10`}
       >
         Skills
       </motion.h1>
       <div className="flex flex-wrap items-center justify-center lg:justify-between gap-y-8 max-w-[64rem]">
         {skills.map(({ title, knowledge }) => (
-          <Skill key={title} title={title} knowledge={knowledge} />
+          <Skill
+            key={title}
+            title={title}
+            knowledge={knowledge}
+            darkmode={darkmode}
+          />
         ))}
       </div>
     </div>

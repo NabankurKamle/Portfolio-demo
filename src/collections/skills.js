@@ -25,7 +25,7 @@ const skills = [
   },
   {
     title: "Express Js",
-    knowledge: 70,
+    knowledge: 65,
   },
   {
     title: "Tailwind CSS",
