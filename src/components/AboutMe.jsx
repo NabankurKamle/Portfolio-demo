@@ -150,9 +150,9 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
           }}
           className="text-[#95ADC7]"
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex autem
-          impedit fugiat vero, iste expedita maxime nam in sequi numquam
-          tempore, dolores hic. Dolorem, excepturi.
+          I am a full stack JavaScript &#40;MERN&#41; developer. I've 2 years
+          experience to work with React Js, Node Js and Tailwind CSS. I can
+          build and fix or upgrade a fully responsive website.
         </motion.p>
         <div>
           <ul className="flex flex-wrap gap-y-5 gap-x-5 text-xs py-8">
