@@ -11,7 +11,7 @@ import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 
 function App() {
-  const [darkmode, setDarkmode] = useState(false);
+  const [darkmode, setDarkmode] = useState(true);
   const [activeLink, setActiveLink] = useState(1);
 
   const handleDarkMode = () => setDarkmode(!darkmode);
