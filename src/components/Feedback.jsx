@@ -58,7 +58,7 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
             <motion.div
               initial={{ y: "5vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
               transition={{
                 type: "spring",
                 duration: 2,
@@ -139,7 +139,7 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
       <motion.button
         initial={{ y: "5vh", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false, amount: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
         transition={{
           type: "spring",
           duration: 3,
