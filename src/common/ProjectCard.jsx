@@ -17,26 +17,28 @@ const ProjectCard = ({ project, darkmode }) => {
           : "shadow-neo hover:shadow-neohover active:shadow-neoInsetButton"
       } w-[12rem] p-2 pb-5 h-[20rem] overflow-hidden flex flex-col text-center justify-between cursor-pointer rounded-xl  hover:scale-105 hover:translate-y-2 transition-all duration-200 ease-out`}
     >
-      <div className="w-full ">
-        <img
-          className="w-full h-[10rem] rounded-xl"
-          src={project.imgUrl}
-          alt=""
-        />
-      </div>
-      <div className={`text-sm ${darkmode ? "text-dark" : "text-light"}`}>
-        <h3 className="mb-6 text-lg">{project.title}</h3>
-        <p
-          style={{
-            display: "-webkit-box",
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: "vertical",
-          }}
-          className="text-[#95ADC7] overflow-hidden"
-        >
-          {project.desc}
-        </p>
-      </div>
+      <a href={project.url} target="_blank">
+        <div className="w-full mb-2">
+          <img
+            className="w-full h-[12rem] rounded-xl object-cover"
+            src={project.imgUrl}
+            alt=""
+          />
+        </div>
+        <div className={`text-sm ${darkmode ? "text-dark" : "text-light"}`}>
+          <h3 className="mb-2 text-lg">{project.title}</h3>
+          <p
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+            }}
+            className="text-[#95ADC7] overflow-hidden"
+          >
+            {project.desc}
+          </p>
+        </div>
+      </a>
     </motion.div>
   );
 };
