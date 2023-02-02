@@ -24,13 +24,6 @@ const portfolios = [
         url: "https://apple-ipod-demo-dsb5.vercel.app/",
         imgUrl: "/img/ipod.PNG",
       },
-      {
-        id: 4,
-        title: "Frontend 4",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse atque quasi veritatis, facilis minus modi!",
-        url: "https://game-store-demo-gilt.vercel.app/",
-        imgUrl: "/img/project.jpg",
-      },
     ],
   },
   {
@@ -54,6 +47,13 @@ const portfolios = [
       {
         id: 3,
         title: "Backend 3",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse atque quasi veritatis, facilis minus modi!",
+        url: "https://game-store-demo-gilt.vercel.app/",
+        imgUrl: "/img/project.jpg",
+      },
+      {
+        id: 4,
+        title: "Backend 4",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse atque quasi veritatis, facilis minus modi!",
         url: "https://game-store-demo-gilt.vercel.app/",
         imgUrl: "/img/project.jpg",
