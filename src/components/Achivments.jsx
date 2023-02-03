@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLaptopCode,
   faPeopleGroup,
-  faAward,
+  faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
@@ -162,8 +162,8 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
               } rounded-lg flex items-center justify-center`}
             >
               <FontAwesomeIcon
-                className="text-2xl text-[#233053]"
-                icon={faAward}
+                className={`text-2xl ${darkmode ? "text-dark" : "text-light"}`}
+                icon={faBriefcase}
               />
             </div>
             <div className="">
@@ -172,10 +172,11 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
                   darkmode ? "text-dark" : "text-light"
                 } text-3xl font-HelveticaRoundedBold mb-3`}
               >
-                <CountUp end={0} suffix="+" duration={1} delay={0.45} />
+                <CountUp end={3} suffix="+" duration={1} delay={0.45} />
               </h1>
               <p className="text-sm text-[#95ADC7]">
-                Honors and awards of national and international field.
+                Have 3 frontend project right now, and working on some other
+                projects
               </p>
             </div>
           </motion.div>
