@@ -110,7 +110,7 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
+                duration: 2,
                 delay: 0.15,
               }}
               className="flex items-start justify-center space-x-3 "
@@ -141,8 +141,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.3,
+                duration: 2,
+                delay: 0.15,
               }}
               className="flex items-start justify-center space-x-3"
             >
@@ -172,8 +172,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.45,
+                duration: 2,
+                delay: 0.15,
               }}
               className="flex items-start justify-center space-x-3"
             >
@@ -203,8 +203,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 0.3 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.6,
+                duration: 2,
+                delay: 0.15,
               }}
               className="flex items-start justify-center space-x-3"
             >
@@ -234,8 +234,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 0.1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.6,
+                duration: 2,
+                delay: 0.15,
               }}
               type="submit"
               className={`${
@@ -253,8 +253,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.6,
+                duration: 2,
+                delay: 0.15,
               }}
               className="text-xs text-center w-[12rem] sm:w-[20rem] px-5 text-[#95ADC7]"
             >
@@ -282,8 +282,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.6,
+                duration: 2,
+                delay: 0.15,
               }}
               className=" flex flex-col items-center justify-center"
             >
@@ -307,8 +307,8 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.6,
+                duration: 2,
+                delay: 0.15,
               }}
               className=" flex flex-col items-center justify-center"
             >

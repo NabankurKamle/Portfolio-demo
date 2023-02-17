@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
@@ -92,7 +91,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
           viewport={{ once: false, amount: 0.2 }}
           transition={{
             type: "spring",
-            duration: 3,
+            duration: 2,
             delay: 0.15,
           }}
           className="py-2 border-t-2 border-[#95ADC7] w-[12rem]"
@@ -103,7 +102,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
-              duration: 3,
+              duration: 2.5,
               delay: 0.15,
             }}
             className="font-HelveticaBold"
@@ -118,7 +117,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             transition={{
               type: "spring",
               duration: 3,
-              delay: 0.3,
+              delay: 0.15,
             }}
             className="font-HelveticaBold"
           >
@@ -131,8 +130,8 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
-              duration: 3,
-              delay: 0.45,
+              duration: 1,
+              delay: 0.15,
             }}
             className="font-HelveticaBold"
           >
