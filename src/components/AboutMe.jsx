@@ -317,7 +317,9 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
                 ? "text-dark shadow-neoButtonDark hover:shadow-neohoverDark active:shadow-neoInsetDark"
                 : "text-light shadow-neoButton hover:shadow-neohover active:shadow-neoInset"
             } rounded-lg px-5 py-3 hover:text-[#006EE5] transition-all duration-200 font-HelveticaRoundedBold`}
+            target="_blank"
             href="/resume/NabankurKamle_Resume.pdf"
+            download="NabankurKamle_Resume.pdf"
           >
             Download CV <FontAwesomeIcon className="ml-2" icon={faDownload} />
           </a>
