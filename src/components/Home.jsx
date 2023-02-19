@@ -24,7 +24,7 @@ const Home = ({ handleActiveLink, darkmode }) => {
       <div
         className={`w-[100%] ${
           darkmode ? "shadow-insetDark bg-dark" : "shadow-inset bg-light"
-        } rounded-lg flex flex-col md:flex-row items-center justify-between px-10 lg:px-0 lg:justify-center gap-y-10 xl:gap-48`}
+        } rounded-lg flex flex-col md:flex-row items-center justify-between px-10 lg:px-0 lg:justify-center gap-y-10 xl:gap-40`}
       >
         <div className=" md:w-[20rem] lg:min-w-[30rem] pt-5 md:pt-0 text-center md:text-start">
           <motion.h1
@@ -66,7 +66,7 @@ const Home = ({ handleActiveLink, darkmode }) => {
             <Link to="">EXPLORE NOW</Link>
           </motion.button>
         </div>
-        <div className="min-h-[22rem] w-60 relative">
+        <div className="min-h-[22rem] w-[16rem] sm:w-[19rem] relative overflow-hidden">
           <motion.img
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -74,7 +74,7 @@ const Home = ({ handleActiveLink, darkmode }) => {
             transition={{ type: "spring", duration: 3, delay: 0.35 }}
             src="/img/profileHome.png"
             alt=""
-            className=" absolute bottom-0 z-20"
+            className=" absolute bottom-0 z-20 object-cover sm:h-full h-[90%]"
           />
           {/* <motion.img
             initial={{ opacity: 0 }}
