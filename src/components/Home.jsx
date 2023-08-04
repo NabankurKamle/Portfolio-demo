@@ -72,7 +72,7 @@ const Home = ({ handleActiveLink, darkmode }) => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ type: "spring", duration: 1, delay: 0.15 }}
-            src="/img/profilemain.png"
+            src="/img/profileMain.png"
             alt=""
             className=" absolute bottom-0 z-[49] object-cover h-full"
           />
