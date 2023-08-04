@@ -11,10 +11,10 @@ const Portfolio = ({ handleActiveLink, darkmode }) => {
     threshold: 0.5,
   });
 
-  const [activePLink, setactivePLink] = useState(1);
+  const [activePLink, setActivePLink] = useState(1);
 
   const handleactivePLink = (id) => {
-    setactivePLink(id);
+    setActivePLink(id);
   };
   useEffect(() => {
     if (inView) {

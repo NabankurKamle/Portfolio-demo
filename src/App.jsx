@@ -15,15 +15,14 @@ function App() {
   const [darkmode, setDarkmode] = useState(true);
   const [activeLink, setActiveLink] = useState(1);
 
+  const handleDarkMode = () => setDarkmode(!darkmode);
+
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleDarkMode = () => setDarkmode(!darkmode);
-
   const handleActiveLink = (id) => {
     setActiveLink(id);
-    setShowMenu(false);
   };
 
   return (

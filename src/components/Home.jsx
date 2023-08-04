@@ -74,7 +74,7 @@ const Home = ({ handleActiveLink, darkmode }) => {
             transition={{ type: "spring", duration: 1, delay: 0.15 }}
             src="/img/profileMain.png"
             alt=""
-            className=" absolute bottom-0 z-[49] object-cover h-full"
+            className=" absolute bottom-0 z-20 object-cover md:h-full h-[90%]"
           />
           {/* <motion.img
             initial={{ opacity: 0 }}

@@ -16,7 +16,7 @@ const Navbar = ({
       style={!showMenu ? { overflow: "hidden" } : { overflow: "visible" }}
       className={`w-[100vw] md:fixed ${
         darkmode ? "bg-dark" : "bg-light"
-      } z-50 overflow-hidden relative`}
+      } z-[10000] overflow-hidden relative`}
     >
       <div onClick={() => handleShowMenu()} className="md:hidden pl-5 pt-5">
         {showMenu ? (
@@ -52,7 +52,10 @@ const Navbar = ({
                           : "bg-light hover:shadow-neoButton text-light"
                       } hover:text-[#006EE5] hover:scale-95 cursor-pointer text-sm text-center px-6`
                 }
-                onClick={() => handleActiveLink(link.id)}
+                onClick={() => {
+                  handleActiveLink(link.id);
+                  handleShowMenu();
+                }}
                 to={link.url}
                 spy={true}
                 smooth={true}
