@@ -13,7 +13,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
     if (inView) {
       handleActiveLink(3);
     }
-  }, [inView]);
+  }, [inView, handleActiveLink]);
   return (
     <div
       ref={ref}
@@ -26,7 +26,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: false, amount: 0.2 }}
-        transition={{ type: "spring", duration: 3, delay: 0.35 }}
+        transition={{ type: "spring", duration: 1, delay: 0.1 }}
         className={`${
           darkmode
             ? "bg-dark shadow-neoDark border-[#001830]"
@@ -52,7 +52,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             transition={{
               type: "spring",
               duration: 3,
-              delay: 0.15,
+              delay: 0.1,
             }}
             className="text-3xl font-HelveticaRoundedBold  text-center lg:text-start mb-10 lg:mb-2"
           >
@@ -64,8 +64,8 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
-              duration: 3,
-              delay: 0.15,
+              duration: 1,
+              delay: 0.1,
             }}
             className="font-HelveticaBold mb-1"
           >
@@ -77,8 +77,8 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
-              duration: 3,
-              delay: 0.3,
+              duration: 1,
+              delay: 0.15,
             }}
             className=" text-[#006EE5]"
           >
@@ -86,46 +86,18 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
           </motion.p>
         </div>
         <motion.div
-          initial={{ y: "5vh", opacity: 0 }}
+          initial={{ y: "2vh", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{
             type: "spring",
-            duration: 2,
+            duration: 1,
             delay: 0.15,
           }}
           className="py-2 border-t-2 border-[#95ADC7] w-[12rem]"
         >
           <motion.p
-            initial={{ y: "5vh", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 1 }}
-            transition={{
-              type: "spring",
-              duration: 2.5,
-              delay: 0.15,
-            }}
-            className="font-HelveticaBold"
-          >
-            Residence:
-            <span className="ml-1 text-[#95ADC7] font-Helvetica">India</span>
-          </motion.p>
-          <motion.p
-            initial={{ y: "5vh", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 1 }}
-            transition={{
-              type: "spring",
-              duration: 3,
-              delay: 0.15,
-            }}
-            className="font-HelveticaBold"
-          >
-            City:
-            <span className="ml-1 text-[#95ADC7] font-Helvetica">Kolkata</span>
-          </motion.p>
-          <motion.p
-            initial={{ y: "5vh", opacity: 0 }}
+            initial={{ y: "2vh", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 1 }}
             transition={{
@@ -135,17 +107,45 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
             }}
             className="font-HelveticaBold"
           >
+            Residence:
+            <span className="ml-1 text-[#95ADC7] font-Helvetica">India</span>
+          </motion.p>
+          <motion.p
+            initial={{ y: "2vh", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              delay: 0.2,
+            }}
+            className="font-HelveticaBold"
+          >
+            City:
+            <span className="ml-1 text-[#95ADC7] font-Helvetica">Kolkata</span>
+          </motion.p>
+          <motion.p
+            initial={{ y: "2vh", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 1 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              delay: 0.25,
+            }}
+            className="font-HelveticaBold"
+          >
             Age:<span className="ml-1 text-[#95ADC7] font-Helvetica">20</span>
           </motion.p>
         </motion.div>
         <motion.p
-          initial={{ y: "5vh", opacity: 0 }}
+          initial={{ y: "2vh", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
-            duration: 3,
-            delay: 0.45,
+            duration: 1,
+            delay: 0.25,
           }}
           className="text-[#95ADC7]"
         >
@@ -161,7 +161,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.15,
                 delayChildren: 1,
               }}
@@ -179,7 +179,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.2,
                 delayChildren: 1,
               }}
@@ -197,7 +197,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.25,
                 delayChildren: 1,
               }}
@@ -215,7 +215,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.3,
                 delayChildren: 1,
               }}
@@ -233,7 +233,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.35,
                 delayChildren: 1,
               }}
@@ -251,7 +251,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.4,
                 delayChildren: 1,
               }}
@@ -269,7 +269,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.45,
                 delayChildren: 1,
               }}
@@ -287,7 +287,7 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.5,
                 delayChildren: 1,
               }}
@@ -302,14 +302,15 @@ const AboutMe = ({ handleActiveLink, darkmode }) => {
           </ul>
         </div>
         <motion.button
-          initial={{ y: "5vh", opacity: 0 }}
+          initial={{ y: "2vh", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 1 }}
           transition={{
             type: "spring",
-            duration: 3,
-            delay: 0.15,
+            duration: 1,
+            delay: 0.5,
           }}
+          className="mt-2"
         >
           <a
             className={`${

@@ -18,7 +18,7 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
     if (inView) {
       handleActiveLink(6);
     }
-  }, [inView]);
+  }, [inView, handleActiveLink]);
   return (
     <div
       ref={ref}
@@ -34,7 +34,7 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
         transition={{
           type: "spring",
           duration: 3,
-          delay: 0.15,
+          delay: 0.1,
         }}
         className={`${
           darkmode ? "text-dark" : "text-light"
@@ -56,12 +56,12 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
             className="w-auto sm:w-[13rem] md:w-[25rem] lg:w-[45rem] xl:w-[40rem] px-1 inline-block sm:flex justify-center"
           >
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.5 }}
               transition={{
                 type: "spring",
-                duration: 2,
+                duration: 1,
                 delay: 0.15,
                 bounce: 0.5,
               }}
@@ -98,7 +98,7 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
           viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
-            duration: 3,
+            duration: 1,
             delay: 0.15,
           }}
           className={`${
@@ -137,13 +137,13 @@ const Feedback = ({ handleActiveLink, darkmode }) => {
         </motion.div>
       </div>
       <motion.button
-        initial={{ y: "5vh", opacity: 0 }}
+        initial={{ y: "2vh", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{
           type: "spring",
-          duration: 3,
-          delay: 0.3,
+          duration: 1,
+          delay: 0.2,
         }}
         className={`${
           darkmode

@@ -22,7 +22,7 @@ const Footer = ({ darkmode }) => {
           transition={{
             type: "spring",
             duration: 3,
-            delay: 0.15,
+            delay: 0.1,
           }}
           className={`${
             darkmode ? "text-dark" : "text-light"
@@ -52,13 +52,13 @@ const Footer = ({ darkmode }) => {
         >
           <div className="mb-5">
             <motion.h3
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 3,
-                delay: 0.15,
+                duration: 1,
+                delay: 0.1,
               }}
               className={`${
                 darkmode ? "text-dark" : " text-light"
@@ -68,7 +68,30 @@ const Footer = ({ darkmode }) => {
             </motion.h3>
             <ul className="flex items-center sm:space-y-0 sm:space-x-3">
               <motion.li
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{
+                  type: "spring",
+                  duration: 1,
+                  delay: 0.1,
+                }}
+                className={`${
+                  darkmode
+                    ? "text-dark hover:shadow-neoInsetButtonDark"
+                    : " text-light hover:shadow-neoInsetButton"
+                } text-lg sm:text-2xl p-2 sm:p-3 transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0165E1]`}
+              >
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.facebook.com/profile.php?id=100029607223964"
+                >
+                  <FaFacebookF />
+                </a>
+              </motion.li>
+              <motion.li
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{
@@ -80,45 +103,24 @@ const Footer = ({ darkmode }) => {
                   darkmode
                     ? "text-dark hover:shadow-neoInsetButtonDark"
                     : " text-light hover:shadow-neoInsetButton"
-                } text-lg sm:text-2xl p-2 sm:p-3 transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#0165E1]`}
-              >
-                <a
-                  target="_blank"
-                  href="https://www.facebook.com/profile.php?id=100029607223964"
-                >
-                  <FaFacebookF />
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ y: "5vh", opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.1 }}
-                transition={{
-                  type: "spring",
-                  duration: 1,
-                  delay: 0.3,
-                }}
-                className={`${
-                  darkmode
-                    ? "text-dark hover:shadow-neoInsetButtonDark"
-                    : " text-light hover:shadow-neoInsetButton"
                 } text-lg sm:text-2xl p-2 sm:p-3 transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#bc2a8d]`}
               >
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://www.instagram.com/nabankur_kamle/"
                 >
                   <BsInstagram />
                 </a>
               </motion.li>
               <motion.li
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{
                   type: "spring",
                   duration: 1,
-                  delay: 0.45,
+                  delay: 0.2,
                 }}
                 className={`${
                   darkmode
@@ -128,19 +130,20 @@ const Footer = ({ darkmode }) => {
               >
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://www.linkedin.com/in/nabankurkamle/"
                 >
                   <FaLinkedinIn />
                 </a>
               </motion.li>
               <motion.li
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{
                   type: "spring",
                   duration: 1,
-                  delay: 0.6,
+                  delay: 0.25,
                 }}
                 className={`${
                   darkmode
@@ -148,7 +151,11 @@ const Footer = ({ darkmode }) => {
                     : " text-light hover:shadow-neoInsetButton"
                 } text-lg sm:text-2xl p-2 sm:p-3 transition-all duration-300 hover:scale-90 ease-in-out rounded-md hover:text-[#F1502F]`}
               >
-                <a target="_blank" href="https://github.com/NabankurKamle">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/NabankurKamle"
+                >
                   <BsGithub />
                 </a>
               </motion.li>
@@ -161,26 +168,26 @@ const Footer = ({ darkmode }) => {
               } text-center sm:text-start`}
             >
               <motion.h3
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
-                  duration: 3,
-                  delay: 0.15,
+                  duration: 1,
+                  delay: 0.1,
                 }}
                 className="font-HelveticaRoundedBold text-lg mb-6"
               >
                 How I works
               </motion.h3>
               <motion.p
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{
                   type: "spring",
-                  duration: 3,
-                  delay: 0.3,
+                  duration: 1,
+                  delay: 0.15,
                 }}
                 className="text-xs leading-4"
               >
@@ -201,52 +208,52 @@ const Footer = ({ darkmode }) => {
               } text-center sm:text-start`}
             >
               <motion.h3
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
-                  duration: 3,
-                  delay: 0.15,
+                  duration: 1,
+                  delay: 0.1,
                 }}
                 className="font-HelveticaRoundedBold text-lg mb-6"
               >
                 Pricing
               </motion.h3>
               <motion.p
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
-                  duration: 3,
-                  delay: 0.3,
+                  duration: 1,
+                  delay: 0.1,
                 }}
                 className="text-xs mb-1"
               >
                 Send Message
               </motion.p>
               <motion.p
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
-                  duration: 3,
-                  delay: 0.3,
+                  duration: 1,
+                  delay: 0.15,
                 }}
                 className="text-xs mb-1"
               >
                 Send Mail
               </motion.p>
               <motion.p
-                initial={{ y: "5vh", opacity: 0 }}
+                initial={{ y: "2vh", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 1 }}
                 transition={{
                   type: "spring",
-                  duration: 3,
-                  delay: 0.3,
+                  duration: 1,
+                  delay: 0.2,
                 }}
                 className="text-xs"
               >

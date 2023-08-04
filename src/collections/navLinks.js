@@ -24,13 +24,13 @@ const links = [
     title: "Portfolio",
     url: "portfolio",
   },
+  // {
+  //   id: 6,
+  //   title: "Feedback",
+  //   url: "feedback",
+  // },
   {
     id: 6,
-    title: "Feedback",
-    url: "feedback",
-  },
-  {
-    id: 7,
     title: "Contact",
     url: "contact",
   },

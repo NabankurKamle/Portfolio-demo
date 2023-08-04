@@ -71,9 +71,9 @@ const Contact = ({ handleActiveLink, darkmode }) => {
 
   useEffect(() => {
     if (inView) {
-      handleActiveLink(7);
+      handleActiveLink(6);
     }
-  }, [inView]);
+  }, [inView, handleActiveLink]);
   return (
     <div
       ref={ref}
@@ -89,7 +89,7 @@ const Contact = ({ handleActiveLink, darkmode }) => {
         transition={{
           type: "spring",
           duration: 3,
-          delay: 0.15,
+          delay: 0.1,
         }}
         className={`text-center text-4xl font-HelveticaRoundedBold  ${
           darkmode ? "text-dark" : "text-light"
@@ -105,13 +105,13 @@ const Contact = ({ handleActiveLink, darkmode }) => {
             className="flex flex-col space-y-3 items-end"
           >
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0.1,
               }}
               className="flex items-start justify-center space-x-3 "
             >
@@ -136,13 +136,13 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0.1,
               }}
               className="flex items-start justify-center space-x-3"
             >
@@ -167,13 +167,13 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0.1,
               }}
               className="flex items-start justify-center space-x-3"
             >
@@ -186,10 +186,10 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               <input
                 className={`${
                   darkmode
-                    ? "text-dark  shadow-insetInputDark placeholder:text-[#2c5e93]"
+                    ? "text-dark shadow-insetInputDark placeholder:text-[#2c5e93]"
                     : "text-light  shadow-insetInput placeholder:text-[#95ADC7]"
                 } w-[12rem] sm:w-[20rem] h-14 outline-none bg-transparent rounded-md px-5 placeholder:text-sm placeholder:opacity-70`}
-                type="tel"
+                type="number"
                 name="user_number"
                 value={numberValue}
                 onChange={handleNumber}
@@ -198,13 +198,13 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0.1,
               }}
               className="flex items-start justify-center space-x-3"
             >
@@ -229,13 +229,13 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               />
             </motion.div>
             <motion.button
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0.1,
               }}
               type="submit"
               className={`${
@@ -247,20 +247,10 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               <FiSend className="mr-3 text-2xl" />
               Send Message
             </motion.button>
-            <motion.p
-              initial={{ y: "5vh", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 1 }}
-              transition={{
-                type: "spring",
-                duration: 2,
-                delay: 0.15,
-              }}
-              className="text-xs text-center w-[12rem] sm:w-[20rem] px-5 text-[#95ADC7]"
-            >
+            <p className="text-xs text-center w-[12rem] sm:w-[20rem] px-5 text-[#95ADC7]">
               For any enquaries, any suggestion, or appreciation you can send a
               message anytime
-            </motion.p>
+            </p>
             <ToastContainer />
           </form>
         </div>
@@ -270,20 +260,20 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ type: "spring", duration: 3, delay: 0.35 }}
+              transition={{ type: "spring", duration: 1, delay: 0.1 }}
               src="/img/contactImg.png"
               alt=""
             />
           </div>
           <div className="flex flex-col lg:flex-row items-end lg:items-center justify-center space-y-5 lg:space-y-0 lg:space-x-5">
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0,
               }}
               className=" flex flex-col items-center justify-center"
             >
@@ -302,13 +292,13 @@ const Contact = ({ handleActiveLink, darkmode }) => {
               </p>
             </motion.div>
             <motion.div
-              initial={{ y: "5vh", opacity: 0 }}
+              initial={{ y: "2vh", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 1 }}
               transition={{
                 type: "spring",
-                duration: 2,
-                delay: 0.15,
+                duration: 1,
+                delay: 0,
               }}
               className=" flex flex-col items-center justify-center"
             >

@@ -20,7 +20,7 @@ const Portfolio = ({ handleActiveLink, darkmode }) => {
     if (inView) {
       handleActiveLink(5);
     }
-  }, [inView]);
+  }, [inView, handleActiveLink]);
   return (
     <div
       ref={ref}
@@ -36,7 +36,7 @@ const Portfolio = ({ handleActiveLink, darkmode }) => {
         transition={{
           type: "spring",
           duration: 3,
-          delay: 0.15,
+          delay: 0.1,
         }}
         className="text-[#006EE5] border-b border-[#006EE5] inline-block text-center font-HelveticaBold text-lg mb-10"
       >

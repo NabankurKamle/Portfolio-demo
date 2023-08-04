@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 @layer base {
   @font-face {
     font-family: "Helvetica";
@@ -32,4 +40,16 @@
     font-style: light italic;
     src: url("/public/font/Helvetica-Rounded-Bold.otf");
   }
+}
+
+/* Chrome, Safari, Edge, opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

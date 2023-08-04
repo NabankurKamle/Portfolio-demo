@@ -13,7 +13,7 @@ const Skills = ({ handleActiveLink, darkmode }) => {
     if (inView) {
       handleActiveLink(4);
     }
-  }, [inView]);
+  }, [inView, handleActiveLink]);
   return (
     <div
       ref={ref}
@@ -29,7 +29,7 @@ const Skills = ({ handleActiveLink, darkmode }) => {
         transition={{
           type: "spring",
           duration: 3,
-          delay: 0.15,
+          delay: 0.1,
         }}
         cla
         className={`text-center text-4xl font-HelveticaRoundedBold  ${

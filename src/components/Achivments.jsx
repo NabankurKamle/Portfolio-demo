@@ -26,7 +26,7 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
     if (inView) {
       handleActiveLink(2);
     }
-  }, [inView]);
+  }, [inView, handleActiveLink]);
   return (
     <div
       ref={ref}
@@ -42,8 +42,8 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
           viewport={{ once: false, amount: 1 }}
           transition={{
             type: "spring",
-            duration: 3,
-            delay: 0.15,
+            duration: 1,
+            delay: 0.1,
           }}
           className="text-[#006EE5] border-b border-[#006EE5] inline-block font-HelveticaBold text-lg mb-3"
         >
@@ -55,8 +55,8 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
           viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
-            duration: 3,
-            delay: 0.3,
+            duration: 1,
+            delay: 0.1,
           }}
           className={`${
             darkmode ? "text-dark" : "text-light"
@@ -67,16 +67,16 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
         </motion.p>
         <div className="text-start">
           <motion.div
-            initial={{ y: "5vh", opacity: 0 }}
+            initial={{ y: "2vh", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
               duration: 2,
-              delay: 0.15,
-              delayChildren: 1,
+              delay: 0.1,
+              delayChildren: 0.05,
             }}
-            className={`flex gap-10 items-start justify-center mb-3 py-2 rounded-2xl ${
+            className={`flex gap-10 items-start justify-center mb-5  rounded-2xl ${
               darkmode ? "hover:shadow-neoButtonDark" : "hover:shadow-neoButton"
             }  hover:scale-105 transition-all duration-100 ease-out`}
           >
@@ -90,7 +90,7 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
                 icon={faLaptopCode}
               />
             </div>
-            <div className="">
+            <div className="my-2">
               <h1
                 className={`${
                   darkmode ? "text-dark" : "text-light"
@@ -105,16 +105,16 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: "5vh", opacity: 0 }}
+            initial={{ y: "2vh", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.3,
-              delayChildren: 1,
+              duration: 1,
+              delay: 0.15,
+              delayChildren: 0.05,
             }}
-            className={`flex gap-10 items-start justify-center mb-3 py-2 rounded-2xl ${
+            className={`flex gap-10 items-start justify-center mb-5 rounded-2xl ${
               darkmode ? "hover:shadow-neoButtonDark" : "hover:shadow-neoButton"
             } hover:scale-105 transition-all duration-100 ease-out`}
           >
@@ -128,7 +128,7 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
                 icon={faPeopleGroup}
               />
             </div>
-            <div className="">
+            <div className="my-2">
               <h1
                 className={`${
                   darkmode ? "text-dark" : "text-light"
@@ -143,16 +143,16 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: "5vh", opacity: 0 }}
+            initial={{ y: "2vh", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.45,
-              delayChildren: 1,
+              duration: 1,
+              delay: 0.2,
+              delayChildren: 0.05,
             }}
-            className={`flex gap-10 items-start justify-center mb-3 py-2 rounded-2xl ${
+            className={`flex gap-10 items-start justify-center mb-5 rounded-2xl ${
               darkmode ? "hover:shadow-neoButtonDark" : "hover:shadow-neoButton"
             } hover:scale-105 transition-all duration-100 ease-out`}
           >
@@ -166,7 +166,7 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
                 icon={faBriefcase}
               />
             </div>
-            <div className="">
+            <div className="my-2">
               <h1
                 className={`${
                   darkmode ? "text-dark" : "text-light"
@@ -185,13 +185,13 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
       <div className="max-w-[30rem] max-h-[30rem] flex items-center justify-center gap-36 relative">
         <div className=" flex flex-col gap-10">
           <motion.div
-            initial={{ y: "5vh", scale: 0.95 }}
+            initial={{ y: "2vh", scale: 0.95 }}
             whileInView={{ y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.15,
+              duration: 1,
+              delay: 0.1,
               bounce: 0.5,
             }}
             className={`${
@@ -203,13 +203,13 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             <SiTailwindcss className="text-4xl text-[#38BDF8]" />
           </motion.div>
           <motion.div
-            initial={{ y: "5vh", scale: 0.95 }}
+            initial={{ y: "2vh", scale: 0.95 }}
             whileInView={{ y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.3,
+              duration: 1,
+              delay: 0.15,
               bounce: 0.5,
             }}
             className={`${
@@ -221,13 +221,13 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             <SiRedux className="text-2xl text-[#764ABC]" />
           </motion.div>
           <motion.div
-            initial={{ y: "5vh", scale: 0.95 }}
+            initial={{ y: "2vh", scale: 0.95 }}
             whileInView={{ y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.45,
+              duration: 1,
+              delay: 0.2,
               bounce: 0.5,
             }}
             className={`${
@@ -244,13 +244,13 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
         </div>
         <div className="flex flex-col gap-10">
           <motion.div
-            initial={{ y: "5vh", scale: 0.95 }}
+            initial={{ y: "2vh", scale: 0.95 }}
             whileInView={{ y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.15,
+              duration: 1,
+              delay: 0.1,
               bounce: 0.5,
             }}
             className={`${
@@ -265,13 +265,13 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             />
           </motion.div>
           <motion.div
-            initial={{ y: "5vh", scale: 0.95 }}
+            initial={{ y: "2vh", scale: 0.95 }}
             whileInView={{ y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.3,
+              duration: 1,
+              delay: 0.15,
               bounce: 0.5,
             }}
             className={`${
@@ -286,13 +286,13 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
             />
           </motion.div>
           <motion.div
-            initial={{ y: "5vh", scale: 0.95 }}
+            initial={{ y: "2vh", scale: 0.95 }}
             whileInView={{ y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{
               type: "spring",
-              duration: 2,
-              delay: 0.45,
+              duration: 1,
+              delay: 0.2,
               bounce: 0.5,
             }}
             className={`${
@@ -313,7 +313,7 @@ const Achivements = ({ handleActiveLink, darkmode }) => {
           viewport={{ once: false, amount: 0.5 }}
           transition={{
             type: "spring",
-            duration: 3,
+            duration: 2,
             delay: 0.5,
             bounce: 0.5,
           }}

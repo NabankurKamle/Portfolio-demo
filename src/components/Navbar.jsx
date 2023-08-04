@@ -1,4 +1,3 @@
-import { useState } from "react";
 import links from "../collections/navLinks";
 import { Link } from "react-scroll";
 import { IoClose, IoMenu } from "react-icons/io5";

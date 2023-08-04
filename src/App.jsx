@@ -41,7 +41,7 @@ function App() {
       <AboutMe handleActiveLink={handleActiveLink} darkmode={darkmode} />
       <Skills handleActiveLink={handleActiveLink} darkmode={darkmode} />
       <Portfolio handleActiveLink={handleActiveLink} darkmode={darkmode} />
-      <Feedback handleActiveLink={handleActiveLink} darkmode={darkmode} />
+      {/* <Feedback handleActiveLink={handleActiveLink} darkmode={darkmode} /> */}
       <Contact handleActiveLink={handleActiveLink} darkmode={darkmode} />
       <Footer darkmode={darkmode} />
     </div>
